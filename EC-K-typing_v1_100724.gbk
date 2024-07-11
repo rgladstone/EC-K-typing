@@ -8963,9 +8963,9 @@ ORIGIN
     13861 TCTGGCGAAC AGAGGTAATT AGATATGGAT CGATAGTACT GCTCTGGTCA TCAGGTAAAT
     13921 GTCTTTCAGA CAT
 //
-LOCUS       G2_KL170_SAMD00076201      17634 bp    DNA     linear   UNC 10-JUL-2024
+LOCUS       K5_G2_KL170_SAMD00076201      17634 bp    DNA     linear   UNC 10-JUL-2024
 DEFINITION  Escherichia coli DNA, capsular polysaccharide synthesis gene
-            cluster
+            cluster, serotype: K5
 ACCESSION   locus_SAMD00076201
 VERSION     v1
 SOURCE      Escherichia coli
@@ -8980,7 +8980,8 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL170"
-                     /note="K type: unknown"
+                     /note="K type: K5"
+                     /serotype="K5"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -37770,9 +37771,9 @@ ORIGIN
     25441 CGGTAAGTCC GACTGGCTTA ACGTCCCGAC CGAACTCCCC CTGCCGGATT CTATTATCGA
     25501 TTCCGAACTC GAACGCTAA
 //
-LOCUS       G3_KL26_30224_1#254_1      28591 bp    DNA     linear   UNC 10-JUL-2024
+LOCUS       K3_G3_KL26_30224_1#254_1      28591 bp    DNA     linear   UNC 10-JUL-2024
 DEFINITION  Escherichia coli DNA, capsular polysaccharide synthesis gene
-            cluster
+            cluster, serotype:K3
 ACCESSION   locus_30224_1#254_1
 VERSION     v1
 SOURCE      Escherichia coli
@@ -37787,7 +37788,8 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL26"
-                     /note="K type: unknown"
+                     /note="K type: K3"
+                     /serotype="K3"
                      /db_xref="taxon:562"
      CDS             1..1614
                      /gene="kpsD_2"
