@@ -23951,9 +23951,9 @@ ORIGIN
     23701 GGCGAACAGA GGTAATTAGA TATGGATCGA TAGTACTGCT CTGGTCATCA GGTAAATGTC
     23761 TTTCAGACAT
 //
-LOCUS       G2_KL49_30821_1#373_1      14477 bp    DNA     linear   UNC 10-JUL-2024
+LOCUS       K16_G2_KL49_30821_1#373_1      14477 bp    DNA     linear   UNC 10-JUL-2024
 DEFINITION  Escherichia coli DNA, capsular polysaccharide synthesis gene
-            cluster
+            cluster, serotype: K16
 ACCESSION   locus_30821_1#373_1
 VERSION     v1
 SOURCE      Escherichia coli
@@ -23968,7 +23968,8 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL49"
-                     /note="K type: unknown"
+                     /note="K type: K16"
+                     /serotype="K16"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
