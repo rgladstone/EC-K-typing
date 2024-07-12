@@ -7282,6 +7282,7 @@ FEATURES             Location/Qualifiers
                      /note="K type: unknown"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
+                     /note="beta-lactamase annotation removed"
      CDS             1..777
                      /gene="kpsM"
                      /product="polysialic acid transport protein KpsM"
@@ -7290,10 +7291,6 @@ FEATURES             Location/Qualifiers
                      /gene="kpsT"
                      /product="polysialic acid transport ATP-binding proteinx KpsT"
                      /locus_tag="KL143_00002"
-     CDS             2078..2389
-                     /gene="group_236"
-                     /product="beta-lactamase"
-                     /locus_tag="KL143_00003"
      CDS             complement(2436..2768)
                      /gene="group_240"
                      /product="hypothetical protein"
@@ -13810,6 +13807,7 @@ FEATURES             Location/Qualifiers
                      /note="K type: unknown"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
+                     /note="beta-lactamase annotation removed"
      CDS             1..777
                      /gene="kpsM"
                      /product="polysialic acid transport protein KpsM"
@@ -13838,10 +13836,6 @@ FEATURES             Location/Qualifiers
                      /gene="group_149"
                      /product="hypothetical protein"
                      /locus_tag="KL184_00008"
-     CDS             9473..10348
-                     /gene="group_236"
-                     /product="beta-lactamase"
-                     /locus_tag="KL184_00009"
      CDS             complement(10395..10601)
                      /gene="group_240"
                      /product="hypothetical protein"
