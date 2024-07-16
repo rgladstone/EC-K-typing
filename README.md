@@ -1,6 +1,6 @@
 E. coli Group 2 and Group 3 focused K-typing database formatted for use with the tool Kaptive https://kaptive.readthedocs.io/en/latest/
 
-K-antigen loci (with and without phenotype). This database is expected to cover the majority of invasive isolates; prevalence is near very high in phylogroups B2 and D, and phylogroups A, B1, and C have a lower prevalence.
+K-antigen loci (with and without phenotype). This database is expected to cover the majority of invasive isolates; prevalence is near complete in phylogroups B2 and D, and phylogroups A, B1, and C have a lower prevalence.
 
 Currently, known K-type references in group 4 are included but need to be separated out into a separate version in V2.  
 
