@@ -24,4 +24,3 @@ Other known non-capsule genes (beta-lactamase) annotations within the K-locus ha
 6) Mäklin, Tommi, Harry A. Thorpe, Anna K. Pöntinen, Rebecca A. Gladstone, Yan Shao, Maiju Pesonen, Alan McNally, et al. 2022. “Strong Pathogen Competition in Neonatal Gut Colonisation.” Nature Communications 13 (1): 7417. http://dx.doi.org/10.1038/s41467-022-35178-5.
 7) Pöntinen, Anna K., Rebecca A. Gladstone, Henri Pesonen, Maiju Pesonen, François Cléon, Benjamin J. Parcell, Teemu Kallonen, et al. 2023. “Β-Lactam Antibiotic Use Modulates Multi-Drug Resistant Clone Success in Escherichia Coli Populations: A Longitudinal Multi-Country Genomic Cohort Study.” https://doi.org/10.2139/ssrn.4364886.
 8) Wyres, Kelly L., Ryan R. Wick, Claire Gorrie, Adam Jenney, Rainer Follador, Nicholas R. Thomson, and Kathryn E. Holt. 2016. “Identification of Klebsiella Capsule Synthesis Loci from Whole Genome Data.” Microbial Genomics 2 (12): e000102. https://doi.org/10.1099/mgen.0.000102.
-
