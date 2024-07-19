@@ -722,9 +722,9 @@ ORIGIN
     14581 TTTAGACAAG TTTTGTAATG CTGCGCCTTG TTCTGCCAGA GTCTGGCGAA CAGAGGTAAT
     14641 TAGATATGGA TCGATAGTAC TGCTCTGGTC ATCAGGTAAA TGTCTTTCAG ACAT
 //
-LOCUS       G2_KL10_30821_1#45_1      18647 bp    DNA     linear   UNC 10-JUL-2024
+LOCUS       K7_G2_KL10_30821_1#45_1      18647 bp    DNA     linear   UNC 10-JUL-2024
 DEFINITION  Escherichia coli DNA, capsular polysaccharide synthesis gene
-            cluster
+            cluster, serotype:K7 
 ACCESSION   locus_30821_1#45_1
 VERSION     v1
 SOURCE      Escherichia coli
@@ -739,7 +739,8 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL10"
-                     /note="K type: unknown"
+                     /note="K type: K7"
+                     /serotype="K7"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
