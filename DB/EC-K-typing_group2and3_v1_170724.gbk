@@ -33660,10 +33660,6 @@ FEATURES             Location/Qualifiers
                      /gene="kpsC_2"
                      /product="capsule export protein KpsC"
                      /locus_tag="KL15_00018"
-     CDS             complement(23656..23750)
-                     /locus_tag="KL15_2292_refound_861"
-                     /gene="group_163"
-                     /product="hypothetical protein"
      CDS             24398..25618
                      /gene="kpsS_2"
                      /product="KpsS protein"
