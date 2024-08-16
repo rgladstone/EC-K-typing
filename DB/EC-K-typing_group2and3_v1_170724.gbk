@@ -15,7 +15,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL102"
-                     /note="K type: puataive K14"
+                     /note="K type: putative K14"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -2907,7 +2907,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL126"
-                     /note="K type: puataive K14"
+                     /note="K type: putative K14"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -3538,7 +3538,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL137"
-                     /note="K type:unknown"
+                     /note="K type: putative K14"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
