@@ -15198,7 +15198,7 @@ FEATURES             Location/Qualifiers
                      /db_xref="taxon:562"
      CDS             1..1311
                      /gene="group_40"
-                     /product="hypothetical protein"
+                     /product="CatB-related O-acetyltransferase"
                      /locus_tag="KL44_00001"
      CDS             complement(1379..4690)
                      /gene="group_41"
