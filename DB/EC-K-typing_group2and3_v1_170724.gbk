@@ -1044,7 +1044,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL107_00001"
      CDS             13569..14909
                      /gene="group_177"
-                     /product="hypothetical protein"
+                     /product="glycosyltransferase family A protein"
                      /locus_tag="KL107_00001"
      CDS             complement(15069..16280)
                      /gene="kpsS"
@@ -1897,7 +1897,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL111_00011"
      CDS             11576..12916
                      /gene="group_177"
-                     /product="hypothetical protein"
+                     /product="glycosyltransferase family A protein"
                      /locus_tag="KL111_00012"
      CDS             complement(13076..14287)
                      /gene="kpsS"
@@ -3860,7 +3860,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL138_00006"
      CDS             3912..5252
                      /gene="group_177"
-                     /product="hypothetical protein"
+                     /product="glycosyltransferase family A protein"
                      /locus_tag="KL138_00007"
      CDS             complement(5404..6621)
                      /gene="kpsS"
@@ -5307,7 +5307,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL144_00008"
      CDS             7978..9318
                      /gene="group_177"
-                     /product="hypothetical protein"
+                     /product="glycosyltransferase family A protein"
                      /locus_tag="KL144_00009"
      CDS             complement(9470..10687)
                      /gene="kpsS"
@@ -7907,7 +7907,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL182_00007"
      CDS             7351..8691
                      /gene="group_177"
-                     /product="hypothetical protein"
+                     /product="glycosyltransferase family A protein"
                      /locus_tag="KL182_00008"
      CDS             complement(8843..10060)
                      /gene="kpsS"
@@ -8991,7 +8991,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL187_00005"
      CDS             7876..9216
                      /gene="group_177"
-                     /product="hypothetical protein"
+                     /product="glycosyltransferase family A protein"
                      /locus_tag="KL187_00006"
      CDS             complement(9327..10577)
                      /gene="kpsS"
@@ -9873,7 +9873,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL218_00007"
      CDS             7509..8849
                      /gene="group_177"
-                     /product="hypothetical protein"
+                     /product="glycosyltransferase family A protein"
                      /locus_tag="KL218_00008"
      CDS             complement(8970..10211)
                      /gene="kpsS"
@@ -11733,7 +11733,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL25_00007"
      CDS             6764..7174
                      /gene="group_161"
-                     /product="hypothetical protein"
+                     /product="alpha-beta hydrolase"
                      /locus_tag="KL25_00008"
      CDS             7528..9657
                      /gene="kpsC_3"
@@ -12135,7 +12135,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL29_00010"
      CDS             12110..13576
                      /gene="group_177"
-                     /product="hypothetical protein"
+                     /product="glycosyltransferase family A protein"
                      /locus_tag="KL29_00011"
      CDS             complement(13697..14938)
                      /gene="kpsS"
@@ -16228,7 +16228,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL48_00001"
      CDS             12109..13575
                      /gene="group_177"
-                     /product="hypothetical protein"
+                     /product="glycosyltransferase family A protein"
                      /locus_tag="KL48_00001"
      CDS             complement(13696..14937)
                      /gene="kpsS"
@@ -18226,7 +18226,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL7_00007"
      CDS             9394..10734
                      /gene="group_177"
-                     /product="hypothetical protein"
+                     /product="glycosyltransferase family A protein"
                      /locus_tag="KL7_00008"
      CDS             complement(10845..12131)
                      /gene="kpsS"
@@ -18980,7 +18980,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL74_00006"
      CDS             8235..9575
                      /gene="group_177"
-                     /product="hypothetical protein"
+                     /product="glycosyltransferase family A protein"
                      /locus_tag="KL74_00007"
      CDS             complement(9691..10935)
                      /gene="kpsS"
@@ -19665,7 +19665,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL80"
-                     /note="K type: putative K20"
+                     /note="K type: group-K13-K20-K23"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -33522,7 +33522,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL40_00007"
      CDS             6202..7140
                      /gene="group_161"
-                     /product="hypothetical protein"
+                     /product="alpha-beta hydrolase"
                      /locus_tag="KL40_00008"
      CDS             7494..9623
                      /gene="kpsC_3"
@@ -37195,7 +37195,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL167_00012"
      CDS             13444..14910
                      /gene="group_177"
-                     /product="hypothetical protein"
+                     /product="glycosyltransferase family A protein"
                      /locus_tag="KL167_00013"
      CDS             complement(15070..16281)
                      /gene="kpsC"
@@ -37964,7 +37964,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL28_00008"
      CDS             10532..11872
                      /gene="group_177"
-                     /product="hypothetical protein"
+                     /product="glycosyltransferase family A protein"
                      /locus_tag="KL28_00009"
      CDS             complement(11993..13234)
                      /gene="kpsS"
@@ -40113,7 +40113,7 @@ FEATURES             Location/Qualifiers
                      /locus_tag="KL4_00008"
      CDS             10700..12040
                      /gene="group_177"
-                     /product="hypothetical protein"
+                     /product="glycosyltransferase family A protein"
                      /locus_tag="KL4_00009"
      CDS             complement(12161..13402)
                      /gene="kpsS"
