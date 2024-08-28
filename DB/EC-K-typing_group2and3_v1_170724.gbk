@@ -3851,8 +3851,8 @@ FEATURES             Location/Qualifiers
                      /product="polysialic acid transport ATP-binding proteinx KpsT"
                      /locus_tag="KL138_00002"
      CDS             2228..2476
-                     /gene="group_109"
-                     /product="hypothetical protein"
+                     /gene="wcaK"
+                     /product="polysaccharide pyruvyl transferase family protein"
                      /locus_tag="KL138_00005"
      CDS             2614..3783
                      /gene="ugd"
@@ -5298,8 +5298,8 @@ FEATURES             Location/Qualifiers
                      /product="Chondroitin polymerase"
                      /locus_tag="KL144_00006"
      CDS             5415..6542
-                     /gene="group_109"
-                     /product="hypothetical protein"
+                     /gene="wcaK"
+                     /product="polysaccharide pyruvyl transferase family protein"
                      /locus_tag="KL144_00007"
      CDS             6680..7849
                      /gene="ugd"
@@ -7898,8 +7898,8 @@ FEATURES             Location/Qualifiers
                      /product="Chondroitin polymerase"
                      /locus_tag="KL182_00005"
      CDS             4788..5915
-                     /gene="group_109"
-                     /product="hypothetical protein"
+                     /gene="wcaK"
+                     /product=""
                      /locus_tag="KL182_00006"
      CDS             6053..7222
                      /gene="ugd"
@@ -18217,8 +18217,8 @@ FEATURES             Location/Qualifiers
                      /product="Chondroitin polymerase"
                      /locus_tag="KL7_00005"
      CDS             6831..7958
-                     /gene="group_109"
-                     /product="hypothetical protein"
+                     /gene="wcaK"
+                     /product="polysaccharide pyruvyl transferase family protein"
                      /locus_tag="KL7_00006"
      CDS             8096..9265
                      /gene="ugd"
