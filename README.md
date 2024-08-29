@@ -2,7 +2,7 @@
 
 EC-K-typing_group2and3_v1_170724.gbk is the main database, it is an _E. coli_ Group 2 and Group 3 (ABC-transporter dependant) K-typing database formatted for use with the tool Kaptive version 3 https://kaptive.readthedocs.io/en/latest/
 
-Phenotypes, if known, are given in K-type and serotype fields. 19/26 group 2 phenotypes are represented, and 6/6 group 3 phenotypes are represented in a database of 111 loci. These loci represent unique gene presence-absence patterns excluding IS-elements.
+Phenotypes, if known, are given in K-type and serotype fields. 19/26 group 2 phenotypes are represented, and 5/6 group 3 phenotypes are represented in a database of 102 loci. These loci represent unique gene presence-absence patterns excluding IS-elements.
 
 K-antigen loci (with and without phenotype). This database is expected to cover the majority of invasive isolates; group 2 and 3 capsule prevalence is near complete in phylogroups B2 and D, whilst phylogroups A, B1, and C have a lower prevalence. ~50,000 E. coli genomes were screened from Bloodstream Infections (human), carriage (human and animal), from Europe, Africa and Asia, and all kpsF-positive assemblies in Blackwell _et al_ PLOS 2018.
 
@@ -15,7 +15,7 @@ Reported to belong to a serogroup https://journals.asm.org/doi/10.1128/iai.39.2.
 2 non-synomous changes in vatD acetyltransferase
 2 insertions of 10 and 12bp in IS-element and 1 non-synomous change
 	K1 and K92
-	K12 and K156
+These two loci are divergent, there is a particularly high density of changes in neuS resulting in 60 NS AA changes
 
 ## Skeleton database
 EC-K-typing_group1and4_v1_180724.gbk is a skeleton Group 1 and Group 4 K-typing database formatted for use with the tool Kaptive version 3 https://kaptive.readthedocs.io/en/latest/
