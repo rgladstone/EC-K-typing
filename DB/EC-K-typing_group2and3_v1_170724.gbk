@@ -32802,7 +32802,7 @@ ORIGIN
     15241 GTTTTGTAAT GCTGCGCCTT GTTCTGCCAG AGTCTGGCGA ACAGAGGTAA TTAGATATGG
     15301 ATCGATAGTA CTGCTCTGGT CATCAGGTAA ATGTCTTTCA GACAT
 //
-LOCUS       K2ab_G2_KL3A2_MG736912      17201 bp    DNA     linear   UNC 10-JUL-2024
+LOCUS       K2ab_G2_KL3_MG736912      17201 bp    DNA     linear   UNC 10-JUL-2024
 DEFINITION  Escherichia coli DNA, capsular polysaccharide synthesis gene
             cluster, serotype:K2ab
 ACCESSION   locus_MG736912
@@ -32818,62 +32818,62 @@ FEATURES             Location/Qualifiers
                      /organism="Escherichia coli"
                      /mol_type="genomic DNA"
                      /strain="strain"
-                     /note="K locus:KL3A2"
+                     /note="K locus:KL3"
                      /note="K type:K2ab"
                      /serotype="K2ab"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
                      /product="polysialic acid transport protein KpsM"
-                     /locus_tag="KL3A2_00001"
+                     /locus_tag="KL3_00001"
      CDS             774..1445
                      /gene="kpsT"
                      /product="polysialic acid transport ATP-binding proteinx KpsT"
-                     /locus_tag="KL3A2_00002"
+                     /locus_tag="KL3_00002"
      CDS             1457..1852
                      /gene="kslA"
                      /product="glycerol-3-phosphate cytidyltransferase"
-                     /locus_tag="KL3A2_00003"
+                     /locus_tag="KL3_00003"
      CDS             1868..3103
                      /gene="kslB"
                      /product="lipopolysaccharide assembly protein"
-                     /locus_tag="KL3A2_00004"
+                     /locus_tag="KL3_00004"
      CDS             3157..6957
                      /gene="kslC"
                      /product="glycerophosphotransferase"
-                     /locus_tag="KL3A2_00005"
+                     /locus_tag="KL3_00005"
      CDS             7060..8088
                      /gene="kslD"
                      /product="alpha/beta hydrolase fold-3"
-                     /locus_tag="KL3A2_00006"
+                     /locus_tag="KL3_00006"
      CDS             8094..9089
                      /gene="kslE"
                      /product="hypothetical protein"
-                     /locus_tag="KL3A2_00007"
+                     /locus_tag="KL3_00007"
      CDS             complement(9251..10489)
                      /gene="kpsS"
                      /product="kpsS protein"
-                     /locus_tag="KL3A2_00008"
+                     /locus_tag="KL3_00008"
      CDS             complement(10524..12551)
                      /gene="kpsC"
                      /product="polysialic acid capsule polysaccharide exportx protein KpsC"
-                     /locus_tag="KL3A2_00009"
+                     /locus_tag="KL3_00009"
      CDS             complement(12548..13288)
                      /gene="kpsU"
                      /product="3-deoxy-manno-octulosonate cytidylyltransferase"
-                     /locus_tag="KL3A2_00010"
+                     /locus_tag="KL3_00010"
      CDS             complement(13298..14974)
                      /gene="kpsD"
                      /product="polysialic acid transport protein"
-                     /locus_tag="KL3A2_00011"
+                     /locus_tag="KL3_00011"
      CDS             complement(14998..16113)
                      /gene="kpsE"
                      /product="Capsule polysaccharide export inner-membranex protein"
-                     /locus_tag="KL3A2_00012"
+                     /locus_tag="KL3_00012"
      CDS             complement(16218..17201)
                      /gene="kpsF"
                      /product="polysialic acid capsule synthesis protein KpsF"
-                     /locus_tag="KL3A2_00013"
+                     /locus_tag="KL3_00013"
 ORIGIN
         1 ATGGCAAGAA GTGGATTTGA AGTCCAGAAA GTCACCGTAG AGGCATTATT TCTACGAGAA
        61 ATACGAACAC GCTTTGGTAA GTTCCGTCTG GGATATCTGT GGGCGATTCT CGAACCCTCT
