@@ -2,7 +2,7 @@
 
 EC-K-typing_group2and3_v1_170724.gbk is the main database, it is an _E. coli_ Group 2 and Group 3 (ABC-transporter dependant) K-typing database formatted for use with the tool Kaptive version 3 https://kaptive.readthedocs.io/en/latest/
 
-Phenotypes, if known, are given in K-type and serotype fields. 19/26 group 2 phenotypes are represented, and 5/6 group 3 phenotypes are represented in a database of 102 loci. These loci represent unique gene presence-absence patterns excluding IS-elements.
+Phenotypes, if known, are given in K-type and serotype fields. 18/26 group 2 phenotypes are represented, and 6/7 group 3 phenotypes are represented in a database of 102 loci. These loci represent unique gene presence-absence patterns excluding IS-elements.
 
 K-antigen loci (with and without phenotype). This database is expected to cover the majority of invasive isolates; group 2 and 3 capsule prevalence is near complete in phylogroups B2 and D, whilst phylogroups A, B1, and C have a lower prevalence. ~50,000 E. coli genomes were screened from Bloodstream Infections (human), carriage (human and animal), from Europe, Africa and Asia, and all kpsF-positive assemblies in Blackwell _et al_ PLOS 2018.
 
@@ -23,8 +23,8 @@ Phenotypes, if known, are given in K-type and serotype fields. Only 3 reference 
 
 Annotated using prokka 1.14.5 and panaroo 3.1.4 from https://github.com/tseemann/prokka and https://github.com/gtonkinhill/panaroo to give consistent annotation across the DB.
 
-Currently, IS-element-associated annotations, but not sequence, have been removed. Kaptive V3 is, therefore, required for this version, and length discrepancies will result when the IS-element is not present in the query assembly.
-Other known non-capsule genes (beta-lactamase) annotations within the K-locus have also been removed, but not the sequence.
+Currently, IS-element-associated annotations, but not sequence, have been removed, 33 of the K-loci have an IS and of those 17 have TIRs in capsule gene CDS, 8/17 carry a capsular gene in the IS. Kaptive V3 is, therefore, required for this version, and length discrepancies will result when the IS-element is not present in the query assembly.
+Another known non-capsule gene (a beta-lactamase) annotation within KL143 has also been removed, but not the sequence.
 
 # References
 1) Blackwell, Grace A., Martin Hunt, Kerri M. Malone, Leandro Lima, Gal Horesh, Blaise T. F. Alako, Nicholas R. Thomson, and Zamin Iqbal. 2021. “Exploring Bacterial Diversity via a Curated and Searchable Snapshot of Archived DNA Sequences.” PLoS Biology 19 (11): e3001421. https://doi.org/10.1371/journal.pbio.3001421.
