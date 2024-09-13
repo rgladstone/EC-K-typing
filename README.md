@@ -7,10 +7,10 @@ Phenotypes, if known, are given in K-type and serotype fields. 18/26 group 2 phe
 K-antigen loci (with and without phenotype). This database is expected to cover the majority of invasive isolates; group 2 and 3 capsule prevalence is near complete in phylogroups B2 and D, whilst phylogroups A, B1, and C have a lower prevalence. ~50,000 E. coli genomes were screened from Bloodstream Infections (human), carriage (human and animal), from Europe, Africa and Asia, and all kpsF-positive assemblies in Blackwell _et al_ PLOS 2018.
 
 Some capsules have the same gene presence absence pattern and different only in sequence
-##	K96 and K54
+###	K96 and K54
 1 non-synomous change in kpsC
 1 simple non-synomous change in K96-07 and one 1 non-synomous change that results in missense for 9 AA and a truncation of 8 AA in K96-07 an alginate o-acetyltransferase.
-##	K13 and K20 
+###	K13 and K20 
 Reported to belong to a serogroup https://journals.asm.org/doi/10.1128/iai.39.2.623-629.1983
 2 non-synomous changes in vatD acetyltransferase
 2 insertions of 10 and 12bp in IS-element and 1 non-synomous change.
