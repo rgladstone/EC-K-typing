@@ -14,7 +14,7 @@ Some capsules have the same gene presence absence pattern and different only in 
 Reported to belong to a serogroup https://journals.asm.org/doi/10.1128/iai.39.2.623-629.1983
 2 non-synomous changes in vatD acetyltransferase
 2 insertions of 10 and 12bp in IS-element and 1 non-synomous change.
-	K1 and K92
+###	K1 and K92
 These two loci are divergent, there is a particularly high density of changes in neuS resulting in 60 NS AA changes.
 
 ## Skeleton database
