@@ -714,51 +714,51 @@ FEATURES             Location/Qualifiers
      CDS             8030..9463
                      /gene="kfoD"
                      /product="hypothetical protein"
-                     /locus_tag="KL107_00006"
+                     /locus_tag="KL107_00007"
      CDS             9505..9894
                      /gene="group_8"
                      /product="putative capsule biosynthesis phosphatase"
-                     /locus_tag="KL107_00007"
+                     /locus_tag="KL107_00008"
      CDS             9885..11453
                      /gene="group_73"
                      /product="capsular polysaccharide"
-                     /locus_tag="KL107_00008"
+                     /locus_tag="KL107_00009"
      CDS             11450..12175
                      /gene="group_229"
                      /product="putative capsular polysaccharide"
-                     /locus_tag="KL107_00009"
+                     /locus_tag="KL107_00010"
      CDS             12271..13440
                      /gene="ugd"
                      /product="UDP-glucose 6-dehydrogenase"
-                     /locus_tag="KL107_00010"
+                     /locus_tag="KL107_00011"
      CDS             13569..14909
                      /gene="group_177"
                      /product="glycosyltransferase family A protein"
-                     /locus_tag="KL107_00011"
+                     /locus_tag="KL107_00012"
      CDS             complement(15069..16280)
                      /gene="kpsS"
                      /product="KpsS protein"
-                     /locus_tag="KL107_00012"
+                     /locus_tag="KL107_00013"
      CDS             complement(16315..18342)
                      /gene="kpsC"
                      /product="polysialic acid capsule polysaccharide exportx protein KpsC"
-                     /locus_tag="KL107_00013"
+                     /locus_tag="KL107_00014"
      CDS             complement(18339..19079)
                      /gene="kpsU"
                      /product="3-deoxy-manno-octulosonate cytidylyltransferase"
-                     /locus_tag="KL107_00014"
+                     /locus_tag="KL107_00015"
      CDS             complement(19089..20765)
                      /gene="kpsD"
                      /product="polysialic acid transport protein"
-                     /locus_tag="KL107_00015"
+                     /locus_tag="KL107_00016"
      CDS             complement(20789..21904)
                      /gene="kpsE"
                      /product="Capsule polysaccharide export inner-membranex protein"
-                     /locus_tag="KL107_00016"
+                     /locus_tag="KL107_00017"
      CDS             complement(22009..22992)
                      /gene="kpsF"
                      /product="polysialic acid capsule synthesis protein KpsF"
-                     /locus_tag="KL107_00017"
+                     /locus_tag="KL107_00018"
 ORIGIN
         1 ATGGCAAGAA GTGGATTTGA AGTCCAGAAA GTCACCGTAG AGGCATTATT TCTACGAGAA
        61 ATACGAACAC GCTTTGGTAA GTTCCGTCTG GGATATCTGT GGGCGATTCT CGAACCCTCT
