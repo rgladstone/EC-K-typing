@@ -11,10 +11,10 @@ Some capsules have the same gene presence absence pattern and differ only in seq
 These capsular types shared the same genes and are highly conserved.
 Putative determinant - one non-synomous change results in missense for 9 AA and a truncation of 8 AA in K96-07 an alginate o-acetyltransferase.
 ###	K13 and K23
-These capsular types shared the same genes and are highly conserved. They have previously been reported to belong to a serogroup along with K20<sup>13</sup> (which has a slightly different gene set)
+These capsular types shared the same genes and are highly conserved. They have previously been reported to belong to a serogroup along with K20<sup>13</sup> (which has a slightly different gene set).
 Putative determinant - 2 non-synomous changes in vatD acetyltransferase
 ###	K1 and K92
-Despite having the same gene content, these two capsular types have divergent sequences, allowing them to be typed separately. Both reference loci are included in the database. There is a particularly high density of changes in neuS, resulting in 60 NS AA changes, known to be the genetic determinant<sup>14</sup>.
+Despite having the same gene content, these two capsular types have divergent sequences, allowing them to be typed separately. Both reference loci are included in the database. There is a particularly high density of changes in neuS, resulting in 60 NS AA changes, neuS is known to be the genetic determinant<sup>14</sup>.
 
 Currently, IS-element-associated annotations, but not sequence, have been removed; 33 of the G2 and G3 K-loci have an IS, and of those, 17 have TIRs in capsule gene CDS, and 9 have putative capsular genes as cargo.
 
