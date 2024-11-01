@@ -15,7 +15,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL103"
-                     /note="K type: K100-like"
+                     /note="K type:unknown K100-like"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -361,7 +361,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL105"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             complement(1..1029)
                      /gene="group_112"
@@ -684,7 +684,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL107"
-                     /note="K type: K4-like"
+                     /note="K type:unknown K4-like"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -1162,7 +1162,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL110"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -1549,7 +1549,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL111"
-                     /note="K type: K4-like"
+                     /note="K type:unknown K4-like"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -1981,7 +1981,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL112"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -2235,7 +2235,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL114"
-                     /note="K type: K2-like"
+                     /note="K type:unknown K2-like"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -2596,7 +2596,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL126"
-                     /note="K type: K14-like"
+                     /note="K type:unknown K14-like"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -2898,7 +2898,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL13"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             complement(1..1284)
                      /gene="group_123"
@@ -3227,7 +3227,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL137"
-                     /note="K type:K14-like"
+                     /note="K type:unknown K14-like"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -3528,7 +3528,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL138"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -3817,7 +3817,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL140"
-                     /note="K type: K7-like"
+                     /note="K type:unknown K7-like"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -4209,7 +4209,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL141"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -4579,7 +4579,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL144"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -4943,7 +4943,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL17"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -5268,7 +5268,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL173"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -5536,7 +5536,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL177"
-                     /note="K type: K5-like"
+                     /note="K type:unknown K5-like"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -5870,7 +5870,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL179"
-                     /note="K type: K2-like"
+                     /note="K type:unknown K2-like"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -6212,7 +6212,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL180"
-                     /note="K type: K74-like"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -6513,7 +6513,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL181"
-                     /note="K type: unknown"
+                     /note="K type:unknown K7-like"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -6847,7 +6847,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL182"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -7197,7 +7197,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL183"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -7514,7 +7514,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL187"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -7872,7 +7872,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL189"
-                     /note="K type: K52-like"
+                     /note="K type:unknown K52-like"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -8388,7 +8388,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL218"
-                     /note="K type: K53-like"
+                     /note="K type:unknown K53-K93-like"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -8748,7 +8748,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL22"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -9060,7 +9060,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL225"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -9425,7 +9425,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL23"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -9741,7 +9741,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL24"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -10046,7 +10046,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL30"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -10412,7 +10412,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL34"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             complement(177..1292)
                      /gene="group_123"
@@ -10745,7 +10745,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL35"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -11061,7 +11061,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL37"
-                     /note="K type: unknown"
+                     /note="K type:unknown K52-like"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -11500,7 +11500,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL39"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -11864,7 +11864,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL42"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -12163,7 +12163,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL43"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..984
                      /gene="kpsF"
@@ -12458,7 +12458,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL44"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..1311
                      /gene="group_40"
@@ -12760,7 +12760,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL45"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             complement(1..1167)
                      /gene="group_48"
@@ -13060,7 +13060,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL46"
-                     /note="K type: K7-like"
+                     /note="K type:unknown K7-like"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -13444,7 +13444,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL48"
-                     /note="K type: K4-like"
+                     /note="K type:unknown K4-like"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -13898,7 +13898,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL5"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -14192,7 +14192,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL53"
-                     /note="K type: unknown"
+                     /note="K type:unknown K2-like"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -14556,7 +14556,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL70"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -14829,7 +14829,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL71"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -15169,7 +15169,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL72"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -15458,7 +15458,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL7"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -15850,7 +15850,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL73"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             782..3181
                      /gene="group_235"
@@ -16216,7 +16216,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL74"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -16584,7 +16584,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL78"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -16929,7 +16929,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL80"
-                     /note="K type: K13-K20-K23-like"
+                     /note="K type:unknown K13-K20-K23-like"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -17223,7 +17223,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL82"
-                     /note="K type: K1-K92-like"
+                     /note="K type:unknown K1-K92-like"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -17537,7 +17537,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL87"
-                     /note="K type: K12-like"
+                     /note="K type:unknown K12-like"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -17933,7 +17933,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL88"
-                     /note="K type: K4-like"
+                     /note="K type:unknown K4-like"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -18350,7 +18350,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL89"
-                     /note="K type: unknown"
+                     /note="K type:unknown K52-like"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -18803,7 +18803,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL91"
-                     /note="K type: K5-like"
+                     /note="K type:unknown K5-like"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -19187,7 +19187,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL93"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             1..777
@@ -19578,7 +19578,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL96"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             complement(1..1281)
                      /gene="group_123"
@@ -19902,7 +19902,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL98"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             28..1143
                      /gene="group_76"
@@ -20204,7 +20204,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL99"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             complement(1..1284)
                      /gene="group_123"
@@ -20621,7 +20621,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL113"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             2..1615
@@ -21183,7 +21183,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL134"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             2..1615
@@ -21747,7 +21747,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL139"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             106..1764
@@ -22228,7 +22228,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL20"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..1614
                      /gene="kpsD_2"
@@ -22774,7 +22774,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL214"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             106..1764
                      /gene="kpsD_2"
@@ -23297,7 +23297,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL55"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             106..1764
                      /gene="kpsD_2"
@@ -23809,7 +23809,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL56"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             106..1764
                      /gene="kpsD_2"
@@ -24358,7 +24358,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL58"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             106..1764
                      /gene="kpsD_2"
@@ -24821,7 +24821,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL59"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             2..1615
                      /gene="kpsD_2"
@@ -25362,7 +25362,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL60"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             106..1764
                      /gene="kpsD_2"
@@ -25827,7 +25827,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL61"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             115..1773
@@ -26314,7 +26314,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL64"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             106..1764
                      /gene="kpsD_2"
@@ -26800,7 +26800,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL65"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             1..1764
                      /gene="kpsD_5"
@@ -27214,7 +27214,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL66"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             106..1764
                      /gene="kpsD_2"
@@ -27552,7 +27552,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL75"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
      CDS             106..1764
                      /gene="kpsD_4"
@@ -27897,7 +27897,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL97"
-                     /note="K type: unknown"
+                     /note="K type:unknown"
                      /db_xref="taxon:562"
                      /note="IS-element related annotations removed"
      CDS             2..1615
@@ -30123,7 +30123,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL16"
-                     /note="K type: K14"
+                     /note="K type:K14"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -31115,7 +31115,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL160"
-                     /note="K type: K19"
+                     /note="K type:K19"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM_4"
@@ -33140,7 +33140,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL26"
-                     /note="K type: K3"
+                     /note="K type:K3"
                      /db_xref="taxon:562"
      CDS             1..1614
                      /gene="kpsD_2"
@@ -33722,7 +33722,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL29"
-                     /note="K type: K4"
+                     /note="K type:K4"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
@@ -35713,7 +35713,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL10"
-                     /note="K type: K7"
+                     /note="K type:K7"
                      /db_xref="taxon:562"
      CDS             1..777
                      /gene="kpsM"
