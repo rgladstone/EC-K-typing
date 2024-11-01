@@ -6,7 +6,7 @@ Phenotypes, if known, are given in the database Genbank K-type fields. When the 
 
 This database is expected to cover the majority of invasive _E. coli_ isolates; group 2 and 3 capsule prevalence is near complete in phylogroups B2 and D, whilst phylogroups A, B1, and C have a lower prevalence. ~50,000 _E. coli_ genomes were screened from bloodstream infections (human), carriage (human and animal), from Europe, North America, Africa and Asia, and all kpsF-positive assemblies (90% ID) in a collection of 661k bacterial assemblies <sup>3–12</sup>
 
-Some capsules have the same gene presence absence pattern and differ only in sequence, the genetic determinants need validation before these are included as phenotypic logic for Kaptive to distinguish these.
+Some capsules have the same gene presence absence pattern and differ only in sequence, the genetic determinants need validation before these are included as phenotypic logic for Kaptive to distinguish.
 ###	K96 and K54
 These capsular types shared the same genes and are highly conserved.
 Putative determinant - one non-synomous change results in missense for 9 AA and a truncation of 8 AA in K96-07 an alginate o-acetyltransferase.
