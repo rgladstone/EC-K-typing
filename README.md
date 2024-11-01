@@ -1,4 +1,4 @@
-# Main Group 2 and Group 3 database
+# _E. coli_ Group 2 and Group 3 capsular K-typing database
 
 EC-K-typing_group2and3_v1_170724.gbk is a _E. coli_ Group 2 and Group 3 (ABC-transporter dependant) K-typing database formatted for use with the tool Kaptive<sub>1</sub> version 3 https://kaptive.readthedocs.io/en/latest/
 
