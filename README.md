@@ -8,6 +8,7 @@ This database is expected to cover the majority of invasive _E. coli_ isolates; 
 
 Some capsules have the same gene presence absence pattern and differ only in sequence, the genetic determinants need validation before these are included as phenotypic logic for Kaptive to distinguish these.
 ###	K96 and K54
+These capsular types shared the same genes and are highly conserved.
 Putative determinant - one non-synomous change results in missense for 9 AA and a truncation of 8 AA in K96-07 an alginate o-acetyltransferase.
 ###	K13 and K23
 These capsular types shared the same genes and are highly conserved. They have previously been reported to belong to a serogroup along with K20<sup>13</sup> (which has a slightly different gene set)
