@@ -1,23 +1,23 @@
 # _E. coli_ Group 2 and Group 3 capsular K-typing database
 
-EC-K-typing_group2and3_v1_170724.gbk is a _E. coli_ Group 2 and Group 3 (ABC-transporter dependant) K-typing database formatted for use with the tool Kaptive<sub>1</sub> version 3 https://kaptive.readthedocs.io/en/latest/
+EC-K-typing_group2and3_v1_170724.gbk is a _E. coli_ Group 2 and Group 3 (ABC-transporter dependant) K-typing database formatted for use with the tool Kaptive<sup>1</sup> version 3 https://kaptive.readthedocs.io/en/latest/
 
-Phenotypes, if known, are given in the database Genbank K-type fields. When the phenotype is unknown and the locus shares multiple region 2 genes with a known phenotype, K-like is denoted in the K-type field. According to the classification reported on https://www.iith.ac.in/EK3D/classification.php<sub>2</sub>, 18/26 group 2 phenotypes are represented, and 7/7 group 3 phenotypes are represented in a database of 101 loci, except K19 which we reclassified as group 3. The 101 loci represent unique capsular gene presence-absence patterns (excluding IS elements).
+Phenotypes, if known, are given in the database Genbank K-type fields. When the phenotype is unknown and the locus shares multiple region 2 genes with a known phenotype, K-like is denoted in the K-type field. According to the classification reported on https://www.iith.ac.in/EK3D/classification.php<sup>2</sup>, 18/26 group 2 phenotypes are represented, and 7/7 group 3 phenotypes are represented in a database of 101 loci, except K19 which we reclassified as group 3. The 101 loci represent unique capsular gene presence-absence patterns (excluding IS elements).
 
-This database is expected to cover the majority of invasive _E. coli_ isolates; group 2 and 3 capsule prevalence is near complete in phylogroups B2 and D, whilst phylogroups A, B1, and C have a lower prevalence. ~50,000 _E. coli_ genomes were screened from bloodstream infections (human), carriage (human and animal), from Europe, North America, Africa and Asia, and all kpsF-positive assemblies (90% ID) in a collection of 661k bacterial assemblies <sub>3–10,11,12</sub>
+This database is expected to cover the majority of invasive _E. coli_ isolates; group 2 and 3 capsule prevalence is near complete in phylogroups B2 and D, whilst phylogroups A, B1, and C have a lower prevalence. ~50,000 _E. coli_ genomes were screened from bloodstream infections (human), carriage (human and animal), from Europe, North America, Africa and Asia, and all kpsF-positive assemblies (90% ID) in a collection of 661k bacterial assemblies <sup>3–10,11,12</sup>
 
 Some capsules have the same gene presence absence pattern and differ only in sequence, the genetic determinants need validation before these are included as phenotypic logic for Kaptive to distinguish these.
 ###	K96 and K54
 Putative determinant - one non-synomous change results in missense for 9 AA and a truncation of 8 AA in K96-07 an alginate o-acetyltransferase.
 ###	K13 and K23
-These capsular types shared the same genes and are highly conserved. They have previously been reported to belong to a serogroup along with K20<sub>13</sub> (which has a slightly different gene set)
+These capsular types shared the same genes and are highly conserved. They have previously been reported to belong to a serogroup along with K20<sup>13</sup> (which has a slightly different gene set)
 Putative determinant - 2 non-synomous changes in vatD acetyltransferase
 ###	K1 and K92
-Despite having the same gene content, these two capsular types have divergent sequences, allowing them to be typed separately. Both reference loci are included in the database. There is a particularly high density of changes in neuS, resulting in 60 NS AA changes, known to be the genetic determinant<sub>14</sub>.
+Despite having the same gene content, these two capsular types have divergent sequences, allowing them to be typed separately. Both reference loci are included in the database. There is a particularly high density of changes in neuS, resulting in 60 NS AA changes, known to be the genetic determinant<sup>14</sup>.
 
 Currently, IS-element-associated annotations, but not sequence, have been removed; 33 of the G2 and G3 K-loci have an IS, and of those, 17 have TIRs in capsule gene CDS, and 9 have putative capsular genes as cargo.
 
-The K-loci genes were Annotated using prokka 1.14.5 and panaroo 3.1.4 from https://github.com/tseemann/prokka<sub>15</sub> and https://github.com/gtonkinhill/panaroo<sub>16</sub> to give consistent annotation across the DB.
+The K-loci genes were Annotated using prokka 1.14.5 and panaroo 3.1.4 from https://github.com/tseemann/prokka<sup>15</sup> and https://github.com/gtonkinhill/panaroo<sup>16</sup> to give consistent annotation across the DB.
 
 References
 1.	Wyres, K. L. et al. Identification of Klebsiella capsule synthesis loci from whole genome data. Microb Genom 2, e000102 (2016).
