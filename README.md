@@ -25,6 +25,7 @@ The K-loci genes were annotated using prokka 1.14.5 and panaroo 3.1.4 from https
 #### Cite
 Gladstone, R. A. et al. Groups 2 and 3 ABC-transporter dependent capsular K-loci contribute significantly to variation in the invasive potential of _Escherichia coli_. medRxiv 2024.11.22.24317484 (2024) doi:10.1101/2024.11.22.24317484.
 https://medrxiv.org/cgi/content/short/2024.11.22.24317484v1
+
 Stanton TD, et al. Fast and Accurate in silico Antigen Typing with Kaptive 3. bioRxiv; 2025. p. 2025.02.05.636613. https://www.biorxiv.org/content/10.1101/2025.02.05.636613v1 
 
 #### References
