@@ -2,11 +2,11 @@
 
 This _E. coli_ Group 2 and Group 3 (ABC-transporter dependent) K-typing database is formatted for use with the tool Kaptive<sup>1</sup> version 3 https://kaptive.readthedocs.io/en/latest/
 
-This database includes 101 loci with unique capsular gene presence-absence patterns (excluding IS elements). It is expected to cover the majority of invasive _E. coli_ isolates; group 2 and 3 capsule prevalence is near complete in phylogroups B2 and D, whilst phylogroups A, B1, and C have a lower prevalence. ~50,000 _E. coli_ genomes were screened from bloodstream infections (human), carriage (human and animal), from Europe, North America, Africa and Asia, and all G2 kpsF-positive assemblies (90% ID) in a collection of 661k bacterial assemblies <sup>3–12</sup>
+This database includes 91 loci with unique capsular gene presence-absence patterns (excluding IS elements). It is expected to cover the majority of invasive _E. coli_ isolates; group 2 and 3 capsule prevalence is near complete in phylogroups B2 and D, whilst phylogroups A, B1, and C have a lower prevalence. ~50,000 _E. coli_ genomes were screened from bloodstream infections (human), carriage (human and animal), from Europe, North America, Africa and Asia, and all G2 kpsF-positive assemblies (90% ID) in a collection of 661k bacterial assemblies <sup>3–12</sup>
 
 Phenotypes, if known, are given in the database Genbank K-type fields. When the phenotype is unknown and the locus shares multiple region 2 genes with a known phenotype, K-like is denoted in the K-type field. According to the classification reported on https://www.iith.ac.in/EK3D/classification.php<sup>2</sup>, 21/26 group 2 phenotypes and 7/7 group 3 phenotypes are represented. We reclassified K19 as group 3.
 
-Some capsules have the same gene presence-absence pattern and differ only in sequence; the genetic determinants need validation before these are included as phenotypic logic for Kaptive to distinguish.
+Some capsules have the same gene presence-absence pattern and differ only in sequence, in this cases multiple K-types are reported for a given K-locus; the genetic determinants need validation before these are included as phenotypic logic for Kaptive to distinguish.
 ###	K96 and K54
 These capsular types share the same genes and are highly conserved.
 Putative determinant - one non-synonymous change results in missense for 9 AA and a truncation of 8 AA in K96-07, an alginate o-acetyltransferase.
@@ -24,10 +24,11 @@ The K-loci genes were annotated using prokka 1.14.5 and panaroo 3.1.4 from https
 
 #### Cite
 Gladstone, R. A. et al. Groups 2 and 3 ABC-transporter dependent capsular K-loci contribute significantly to variation in the invasive potential of _Escherichia coli_. medRxiv 2024.11.22.24317484 (2024) doi:10.1101/2024.11.22.24317484.
-https://medrxiv.org/cgi/content/short/2024.11.22.24317484v1 
+https://medrxiv.org/cgi/content/short/2024.11.22.24317484v1
+Stanton TD, et al. Fast and Accurate in silico Antigen Typing with Kaptive 3. bioRxiv; 2025. p. 2025.02.05.636613. https://www.biorxiv.org/content/10.1101/2025.02.05.636613v1 
 
 #### References
-1.	Wyres, K. L. et al. Identification of Klebsiella capsule synthesis loci from whole genome data. Microb Genom 2, e000102 (2016).
+1.	Stanton TD, et al. Fast and Accurate in silico Antigen Typing with Kaptive 3. bioRxiv; 2025. p. 2025.02.05.636613. https://www.biorxiv.org/content/10.1101/2025.02.05.636613v1
 2.	Kunduru, B. R., Nair, S. A. & Rathinavelan, T. EK3D: an E. coli K antigen 3-dimensional structure database. Nucleic Acids Res. 44, D675–81 (2016).
 3.	Gladstone, R. A. et al. Emergence and dissemination of antimicrobial resistance in Escherichia coli causing bloodstream infections in Norway in 2002–17: a nationwide, longitudinal, microbial population genomic study. The Lancet Microbe 2, e331–e341 (2021).
 4.	Arredondo-Alonso, S. et al. Plasmid-driven strategies for clone success in Escherichia coli. bioRxiv 2023.10.14.562336 (2023) doi:10.1101/2023.10.14.562336.
