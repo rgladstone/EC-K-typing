@@ -29325,7 +29325,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL3"
-                     /note="K type:K2ab"
+                     /note="K type:K2"
                      /serotype="K2ab"
                      /db_xref="taxon:562"
      CDS             1..984
