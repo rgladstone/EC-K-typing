@@ -1,29 +1,29 @@
-﻿Gene,Non-unique Gene name,Annotation,No. isolates,No. sequences,Avg sequences per isolate,Genome Fragment,Order within Fragment,Accessory Fragment,Accessory Order with Fragment,QC,Min group size nuc,Max group size nuc,Avg group size nuc,G3_KL.P113_30859_5.60_1,G3_KL.P134_ERR1016526,G3_KL.P139_47624_1.46,G3_KL.P20_30134_6.69_2,G3_KL.P214_SRR6107012,G3_KL.P55_ERR1609148,G3_KL.P56_ERR1609308,G3_KL.P58_ERR1609138,G3_KL.P59_ERR12107526,G3_KL.P60_ERR4036254,G3_KL.P61_ERR1609361,G3_KL.P64_ERR1609624,G3_KL.P65_ERR1622244,G3_KL.P66_ERR1790491,G3_KL.P75_ERR3905540,G3_KL.P97_30348_1.301_1,K10_G3_KL.P15_ERR972368,K11_G3_KL.P57_MG736913,K19_G3_KL.P160_ERR1025281,K3_G3_KL.P26_30224_1.254_1,K96_G3_KL.P36_MG736915,K98_G3_KL.P27_30348_2.134_1
+﻿Gene,Non-unique Gene name,Annotation,No. isolates,No. sequences,Avg sequences per isolate,Genome Fragment,Order within Fragment,Accessory Fragment,Accessory Order with Fragment,QC,Min group size nuc,Max group size nuc,Avg group size nuc,G3_KL113_30859_5.60_1,G3_KL134_ERR1016526,G3_KL139_47624_1.46,K98_G3_KL20_30134_6.69_2,G3_KL214_SRR6107012,G3_KL55_ERR1609148,G3_KL56_ERR1609308,G3_KL58_ERR1609138,G3_KL59_ERR12107526,G3_KL60_ERR4036254,G3_KL61_ERR1609361,G3_KL64_ERR1609624,G3_KL65_ERR1622244,G3_KL66_ERR1790491,G3_KL75_ERR3905540,G3_KL97_30348_1.301_1,K10_G3_KL15_ERR972368,K11_G3_KL57_MG736913,K19_G3_KL160_ERR1025281,K3_G3_KL26_30224_1.254_1,K96_G3_KL36_MG736915,G3_KL27_30348_2.134_1
 kpsD_2,,polysialic acid transport protein,,,,,,,,,,,19,1,1,1,1,1,1,1,1,1,1,1,1,,1,,1,1,1,,1,1,1
 kpsM_2,,polysialic acid transport protein KpsM,,,,,,,,,,,19,1,1,1,1,1,1,1,1,1,1,1,1,,1,,1,1,1,,1,1,1
-kpsE_2,,Capsule polysaccharide export inner-membrane protein,,,,,,,,,,,18,1,1,1,1,1,1,1,1,1,1,1,1,,1,,,1,1,,1,1,1
 kpsT_2,,polysialic acid transport ATP-binding protein KpsT,,,,,,,,,,,18,1,1,1,1,1,1,1,1,1,1,1,1,,1,,,1,1,,1,1,1
+kpsE_2,,Capsule polysaccharide export inner-membrane protein,,,,,,,,,,,18,1,1,1,1,1,1,1,1,1,1,1,1,,1,,,1,1,,1,1,1
 kpsC_5,,capsule export protein KpsC,,,,,,,,,,,10,,,1,,1,1,1,1,,1,1,1,,1,,,,1,,,,
 kpsS_5,,KpsS protein,,,,,,,,,,,10,,,1,,1,1,1,1,,1,1,1,,1,,,,1,,,,
 kpsC_2,,capsule export protein KpsC,,,,,,,,,,,9,1,1,,1,,,,,1,,,,,,,1,1,,,1,1,1
 kpsS_2,,KpsS protein,,,,,,,,,,,9,1,1,,1,,,,,1,,,,,,,1,1,,,1,1,1
-kpsF_3,,polysialic acid capsule synthesis protein KpsF,,,,,,,,,,,1,,,,,,,,,,,,,,1,,,,,,,,
-kpsC_4,,polysialic acid capsule polysaccharide export protein KpsC,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,1,,,
 kpsD_3,,polysialic acid transport protein,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,1,,,
+kpsM_4,,ABC-type polysaccharide/polyol phosphate export systems permease,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,1,,,
+kpsT_3,,polysialic acid transport ATP-binding protein KpsT,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,1,,,
 kpsE_3,,Capsule polysaccharide export inner-membrane protein,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,1,,,
 kpsF_2,,polysialic acid capsule synthesis protein KpsF,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,1,,,
-kpsM_4,,ABC-type polysaccharide/polyol phosphate export systems permease,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,1,,,
+kpsC_4,,polysialic acid capsule polysaccharide export protein KpsC,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,1,,,
 kpsS_6,,KpsS protein,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,1,,,
-kpsT_3,,polysialic acid transport ATP-binding protein KpsT,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,1,,,
-kpsC_7,,capsule export protein KpsC,,,,,,,,,,,1,,,,,,,,,,,,,1,,,,,,,,,
 kpsD_5,,polysialic acid transport protein,,,,,,,,,,,1,,,,,,,,,,,,,1,,,,,,,,,
 kpsM_6,,ABC-type polysaccharide/polyol phosphate export systems permease,,,,,,,,,,,1,,,,,,,,,,,,,1,,,,,,,,,
 kpsT_5,,polysialic acid transport ATP-binding protein,,,,,,,,,,,1,,,,,,,,,,,,,1,,,,,,,,,
+kpsC_7,,capsule export protein KpsC,,,,,,,,,,,1,,,,,,,,,,,,,1,,,,,,,,,
 kpsS_7,,KpsS protein,,,,,,,,,,,2,,,,,,,,,,,,,1,,1,,,,,,,
-kpsC_6,,capsule export protein KpsC,,,,,,,,,,,1,,,,,,,,,,,,,,,1,,,,,,,
 kpsD_4,,polysialic acid transport protein,,,,,,,,,,,1,,,,,,,,,,,,,,,1,,,,,,,
 kpsM_5,,ABC-type polysaccharide/polyol phosphate export systems permease,,,,,,,,,,,1,,,,,,,,,,,,,,,1,,,,,,,
+kpsC_6,,capsule export protein KpsC,,,,,,,,,,,1,,,,,,,,,,,,,,,1,,,,,,,
 kpsT_4,,polysialic acid transport ATP-binding protein,,,,,,,,,,,1,,,,,,,,,,,,,,,1,,,,,,,
+kpsF_3,,polysialic acid capsule synthesis protein KpsF,,,,,,,,,,,1,,,,,,,,,,,,,,1,,,,,,,,
 rmlD_2,,UDP-N-acetyl-D-mannosamine dehydrogenase,,,,,,,,,,,17,1,1,1,1,1,1,1,1,1,1,1,1,,,,1,1,,,1,1,1
 rmlA,,glucose-1-phosphate thymidylyltransferase,,,,,,,,,,,17,1,1,1,1,1,1,1,1,1,1,1,1,,,,1,1,,,1,1,1
 rmlB,,dTDP-D-glucose 46-dehydratase rmlB,,,,,,,,,,,17,1,1,1,1,1,1,1,1,1,1,1,1,,,,1,1,,,1,1,1
