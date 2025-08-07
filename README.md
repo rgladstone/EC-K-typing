@@ -15,6 +15,8 @@ These capsular types share the same genes and are highly conserved. They have pr
 Putative determinant - 2 non-synonymous changes in the VatD acetyltransferase.
 ###	K1 and K92
 Despite having the same gene content, these two capsular types have divergent sequences, allowing them to be typed separately. Therefore, both reference loci are included in the database under KL8 allele 1 (K1) and KL8 allele 2 (K92). A divergent _neuS_ gene is known to be the genetic determinant<sup>14</sup>.
+###     K6 and K24
+Phenotypes from two different sources were used to assign K6 (SSI phenotyped ERZ24125990,ERZ24113823) and K24 (MG739439,PMID:29357266) to KL14.   
 ###	Atypical K-loci
 These K-loci have an atypical locus architecture, with the capsular-specific region 2 genes outside of regions 1 and 3. If similar loci exist with additional novel region 2 genes after the end of the loci included in the DB, they will look typeable, but the extra region 2 genes may not be captured. We recommend additional inspection of atypical loci marked as atypical in the DB K-type field that will appear in the Kaptive output. 
 
