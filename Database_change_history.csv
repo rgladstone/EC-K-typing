@@ -1,0 +1,28 @@
+﻿Date,K-locus,Action,Reason
+08/04/2025,KL137,removed from database,Frequent mistyping of KL16 as KL137. KL137 differs from KL16 by a disrupted vatD. This can be captured with Kaptive logic once any phenotypic difference is known making inclusion in the database redundant. 
+08/04/2025,KL114,removed from database,Frequent mistyping of KL3 as KL114. KL114 group97 is an allele of kslC that was not clustered with kslC due to a disrupted mosaic of kslC and group97 in KL53.
+08/04/2025,KL53,removed from database,Frequent mistyping of KL3 as KL53. KL53 differs from KL3 by a disrupted kslC/group97 gene. This can be captured with Kaptive logic once any phenotypic difference is known making inclusion in the database redundant. 
+08/04/2025,KL140,removed from database,Frequent mistyping of KL10 as KL140. KL140 differs from KL10 due to a disrupted rffE gene. This can be captured with Kaptive logic once any phenotypic difference is known making inclusion in the database redundant.
+08/04/2025,KL189,removed from database,"Frequent mistyping of KL11 as KL189. KL189 was only observed once in a low-quality assembly which could have  misassemblies, it has an insertion of two genes and kpsT is split. As it has not been seen in other isolates and is interferring with correctly tying the common KL11 it has been removed."
+08/04/2025,KL37,removed from database,Frequent mistyping of KL11 as KL37. KL37 differs from KL11 due to a disrupted group195 gene. This can be captured with Kaptive logic once any phenotypic difference is known making inclusion in the database redundant.
+08/04/2025,KL89,removed from database,Frequent mistyping of KL11 as KL89. KL89 differs from KL11 by an IS and a truncation of group30 gene. This can be captured with Kaptive logic once any phenotypic difference is known making inclusion in the database redundant.
+08/04/2025,KL18,removed from database,Frequent mistyping of KL3 as KL18. KL18 differs from KL3 by disruption of the kslD gene. Both KL3 and KL18 phenotype as K2. If any subsequenct phenotypic difference is discovered it can be included with Kaptive logic making inclusion in the database redundant.
+08/04/2025,KL87,removed from database,Frequent mistyping of KL86 as KL87. KL87 differs from KL86 by a disruption of the group77 gene. This can be captured with Kaptive logic once any phenotypic difference is known making inclusion in the database redundant.
+08/04/2025,KL107,removed from database,Frequent mistyping of KL29 as KL107. KL107 differs from KL29 by an IS element and a disruption of the kfoB gene. This can be captured with Kaptive logic once any phenotypic difference is known making inclusion in the database redundant.
+08/04/2025,KL31,phenotype removed,Phenotype K74 was reported for 1 NCTC strain but K74 is not considered a K-antigen anymore.
+08/04/2025,KL27,phenotype removed,Phenotype K98 reported for 1 enterobase strain but KL27 is negative for K98. KL20 was confirmed to K98. 
+08/04/2025,KL20,phenotype added,KL20 strains confirmed to be phenotypically K98.
+01/09/2025,KL99,removed from database,Frequent mistyping of KL13 as KL99. KL99 differs from KL13 and KL34 by a duplication of  group 154.
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,

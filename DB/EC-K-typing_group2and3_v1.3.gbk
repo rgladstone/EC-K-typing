@@ -28549,7 +28549,7 @@ ORIGIN
     14701 aacttaccaa agcgtgttcg tatttctcgt agaaataatg cctctacggt gactttctgg
     14761 acttcaaatc cacttcttgc cat
 //
-LOCUS       K24_K6_G2_KL14_30134_6#170_3 15345 bp    DNA     linear   UNK 19-JUL-2024
+LOCUS       K24_G2_KL14_30134_6#170_3 15345 bp    DNA     linear   UNK 19-JUL-2024
 DEFINITION  Escherichia coli DNA, capsular polysaccharide synthesis gene
             cluster, serotype:K6.
 ACCESSION   30134_6#170_3
@@ -28568,7 +28568,7 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic DNA"
                      /strain="strain"
                      /note="K locus:KL14"
-                     /note="K type:K24_K6"
+                     /note="K type:K24"
                      /serotype="K6"
                      /db_xref="taxon:562"
      CDS             1..984
