@@ -1,0 +1,17 @@
+Pneumo lineage vs. serotype effect
+Logistic mixed effects model with serotype as fixed effect and lineage as random effect
+
+Outcome is binary disease / carriage, 
+
+Build a model with two hierarchical levels: serotypes as fixed effects and lineage as random effect
+Take also the country into account (USA / South-Africa)
+
+R version 4.5.1 and packages typical install time <15mins
+Expected runtime <1min
+
+Input file https://github.com/rgladstone/EC-K-typing/blob/main/invasiveness/pneumo_example/NT_update_Pneumo_lineage_invasiveness.csv 
+Heatmat output: https://github.com/rgladstone/EC-K-typing/blob/main/invasiveness/pneumo_example/pnuemococcal_heatmap.top50.lineages.serotype.pdf
+
+To run the model on your own data, replace the above input file with the same column headers and equivalent metadata
+Make sure that your data are representative snapshots of the bacterial population for a given country and time period.
+

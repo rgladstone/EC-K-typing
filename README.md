@@ -2,9 +2,11 @@
 
 This _E. coli_ Group 2 and Group 3 (ABC-transporter dependent) K-typing database is formatted for use with the tool Kaptive<sup>1</sup> version 3 https://kaptive.readthedocs.io/en/latest/
 
-This database includes 91 loci with unique capsular gene presence-absence patterns (excluding IS elements). It is expected to cover the majority of invasive _E. coli_ isolates; group 2 and 3 capsule prevalence is near complete in phylogroups B2 and D, whilst phylogroups A, B1, and C have a lower prevalence. ~50,000 _E. coli_ genomes were screened from bloodstream infections (human), carriage (human and animal), from Europe, North America, Africa and Asia, and all G2 kpsF-positive and G3 kpsM-positive assemblies (90% kmerID) in a collection of 661k bacterial assemblies <sup>3–12</sup>
+This database includes 90 loci with unique capsular gene presence-absence patterns (excluding IS elements). It is expected to cover the majority of invasive _E. coli_ isolates; group 2 and 3 capsule prevalence is near complete in phylogroups B2 and D, whilst phylogroups A, B1, and C have a lower prevalence. ~50,000 _E. coli_ genomes were screened from bloodstream infections (human), carriage (human and animal), from Europe, North America, Africa and Asia, and all G2 kpsF-positive and G3 kpsM-positive assemblies (90% kmerID) in a collection of 661k bacterial assemblies <sup>3–12</sup>
 
-Phenotypes, if known, are given in the database Genbank K-type fields. When the phenotype is unknown and the locus shares multiple region 2 genes with a known phenotype, K-like is denoted in the K-type field. According to the classification reported on https://www.iith.ac.in/EK3D/classification.php<sup>2</sup>, 21/26 group 2 phenotypes and 7/7 group 3 phenotypes are represented. We reclassified K19 as group 3.
+Phenotypes, if known, are given in the database Genbank K-type fields. When the phenotype is unknown and the locus shares multiple region 2 genes with a known phenotype, K-like is denoted in the K-type field. Most 21/26 group 2 phenotypes and 7/7 group 3 phenotypes are represented.
+
+Please refer to the Kaptive documentation for intrepretation of the Kaptive outputs. Kaptive<sup>1</sup> version 3 https://kaptive.readthedocs.io/en/latest/
 
 Some capsules have the same gene presence-absence pattern and differ only in sequence, in this cases multiple K-types are reported for a given K-locus; the genetic determinants need validation before these are included as phenotypic logic for Kaptive to distinguish.
 ###	K96 and K54
@@ -15,12 +17,11 @@ These capsular types share the same genes and are highly conserved. They have pr
 Putative determinant - 2 non-synonymous changes in the VatD acetyltransferase.
 ###	K1 and K92
 Despite having the same gene content, these two capsular types have divergent sequences, allowing them to be typed separately. Therefore, both reference loci are included in the database under KL8 allele 1 (K1) and KL8 allele 2 (K92). A divergent _neuS_ gene is known to be the genetic determinant<sup>14</sup>.
-###     K6 and K24
-Phenotypes from two different sources were used to assign K6 (SSI phenotyped ERZ24125990,ERZ24113823) and K24 (MG739439,PMID:29357266) to KL14.   
+
 ###	Atypical K-loci
 These K-loci have an atypical locus architecture, with the capsular-specific region 2 genes outside of regions 1 and 3. If similar loci exist with additional novel region 2 genes after the end of the loci included in the DB, they will look typeable, but the extra region 2 genes may not be captured. We recommend additional inspection of atypical loci marked as atypical in the DB K-type field that will appear in the Kaptive output. 
 
-Currently, non-capsular IS-element-associated annotations, but not sequence, have been removed; 33 of the G2 and G3 K-loci have an IS, 17 of those have TIRs in capsule gene CDS, and 9 have putative capsular genes as cargo.
+Currently, non-capsular IS-element-associated annotations, but not sequence, have been removed.
 
 The K-loci genes were annotated using prokka 1.14.5 and panaroo 3.1.4 from https://github.com/tseemann/prokka<sup>15</sup> and https://github.com/gtonkinhill/panaroo<sup>16</sup> to give consistent annotation across the DB.
 

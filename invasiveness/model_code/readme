@@ -1,0 +1,24 @@
+Capsular K-antigens and invasive potential of Escherichia coli
+Logistic mixed models with infection/carriage as outcome, k-antigen as fixed eefect and lineage as random effect run on different data
+
+R version 4.5.1 and packages typical install time <15mins 
+Expected runtime <1min
+
+The code uses 
+1) The full dataset 2003-2017 with the updated K-designations
+ + sensitivity analyses:
+2) BSAC restricted to adults (>19 years old) only n=1550/2036
+3) BSAC elderly adults only (>59 year old) n=1202/2036
+4) BSAC with ST393 subsampled in 2003-2013 down to the same proportion as 2014-2017 of 0.02 n=2008/2036
+5) Adjusting for the BSAC CTX-M prevalence of each lineage n=2036 (it is not possible to determine the CTX-M status of individual babybiome assemblies so a lineage based penalty is the only way to do it)
+
+Input files 
+1) https://github.com/rgladstone/EC-K-typing/tree/main/invasiveness/model_input/BB_SCandK_020625.csv
+2) https://github.com/rgladstone/EC-K-typing/tree/main/invasiveness/model_input/BSAC_FULL_pp25_2003_2018_clades_020625.csv
+
+Expected output
+https://github.com/rgladstone/EC-K-typing/tree/main/invasiveness/model_output/
+
+To run the model on your own data, replace the above input files with 1) control/carriage data 2) case/disease data with the same column headers and metadata
+Make sure that your data are representative snapshots of the bacterial population for a given country and time period.
+
