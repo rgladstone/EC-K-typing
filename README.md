@@ -28,10 +28,10 @@ The K-loci genes were annotated using prokka 1.14.5 and panaroo 3.1.4 from https
 #### Cite
 Gladstone, R. A. et al. Groups 2 and 3 ABC-transporter dependent capsular K-loci contribute significantly to variation in the invasive potential of _Escherichia coli_. 2025 medRxiv https://doi.org/10.1101/2024.11.22.24317484
 
-Stanton TD, et al. Fast and Accurate in silico Antigen Typing with Kaptive 3. 2025 MGen https://doi.org/10.1099/mgen.0.001428 
+Stanton TD, et al. Fast and Accurate in silico Antigen Typing with Kaptive 3. 2025 MGEN https://doi.org/10.1099/mgen.0.001428 
 
 #### References
-1.	Stanton TD, et al. Fast and Accurate in silico Antigen Typing with Kaptive 3. bioRxiv; 2025. p. 2025.02.05.636613. https://www.biorxiv.org/content/10.1101/2025.02.05.636613v1
+1.	Stanton TD, et al. Fast and Accurate in silico Antigen Typing with Kaptive 3. Microb. Genom. 11 mgen001428 (2025).
 2.	Kunduru, B. R., Nair, S. A. & Rathinavelan, T. EK3D: an E. coli K antigen 3-dimensional structure database. Nucleic Acids Res. 44, D675–81 (2016).
 3.	Gladstone, R. A. et al. Emergence and dissemination of antimicrobial resistance in Escherichia coli causing bloodstream infections in Norway in 2002–17: a nationwide, longitudinal, microbial population genomic study. The Lancet Microbe 2, e331–e341 (2021).
 4.	Arredondo-Alonso, S. et al. Plasmid-driven strategies for clone success in Escherichia coli. bioRxiv 2023.10.14.562336 (2023) doi:10.1101/2023.10.14.562336.
