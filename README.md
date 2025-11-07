@@ -1,24 +1,25 @@
 # _E. coli_ Group 2 and Group 3 capsular K-typing database
 
-###	V3 Database update
+###	Database update summary V3
 KL nomenclature now reflects K-phenotype numbering with unknown phenotypes as KL110+. 
 For runs prior to 6/11/25, we recommend rerunning kaptive with the lastest version of the DB or using the lookup table provided in EC-K-typing/supplementary.
 
-This _E. coli_ Group 2 and Group 3 (ABC-transporter dependent) K-typing database is formatted for use with the tool Kaptive<sup>[1]</sup> version 3.0.0b5 https://kaptive.readthedocs.io/en/latest/
+###	Information
+This database allows the _in-silico_ K-typing of _E. coli_ Group 2 and Group 3 (ABC-transporter dependent) K-loci.
 
 This database includes K-loci with unique capsular gene presence-absence patterns (excluding IS elements). It is expected to cover the majority of invasive _E. coli_ isolates; group 2 and 3 capsule prevalence is near complete in phylogroups B2 and D, whilst phylogroups A, B1, and C have a lower prevalence. ~50,000 _E. coli_ genomes were screened from bloodstream infections (human), carriage (human and animal), from Europe, North America, Africa and Asia, and all G2 kpsF-positive and G3 kpsM-positive assemblies (90% kmerID) in a collection of 661k bacterial assemblies <sup>[2–12]</sup>.
 
-Phenotypes, if known, are provided in the GenBank K-type fields. Most (20/26) group 2 phenotypes and all (6/6) group 3 phenotypes are represented by the database </sup>[13]</sup>.
+Phenotypes, if known, are provided in the GenBank K-type fields. Most (20/26) group 2 phenotypes and all (6/6) group 3 phenotypes are represented by the database <sup>[13]</sup>.
 
 Some capsules have the same gene presence-absence pattern and differ only in sequence; in these cases, multiple K-types are reported for a given K-locus. The genetic determinants need validation before they are included as phenotypic logic for Kaptive to distinguish.
 
-###	K96 and K54
-These capsular types share the same genes and are highly conserved. K54 has been reported to be a modified K96 polysaccharide where transfer of threonine and serine replaces some of the glucuronic acid. Such modifications are thought to be encoded outside of the kps </sup>[14, 15]</sup>
-###	K13 and K23
+####	K96 and K54
+These capsular types share the same genes and are highly conserved. K54 has been reported to be a modified K96 polysaccharide where transfer of threonine and serine replaces some of the glucuronic acid. Such modifications are thought to be encoded outside of the kps <sup>[14, 15]</sup>
+####	K13 and K23
 These capsular types share the same genes and are highly conserved. They have previously been reported to belong to a serogroup along with K20<sup>[16]</sup> that has replaced one gene relative to K13 and K23.
-###	K1 and K92
+####	K1 and K92
 Despite having the same gene content, these two capsular types have divergent sequences, allowing them to be typed separately. Therefore, both reference loci are included in the database under KL1 (K1) and KL92 (K92). A divergent _neuS_ gene is known to be the genetic determinant<sup>[17]</sup>.
-###	Atypical K-loci
+####	Atypical K-loci
 These K-loci have an atypical locus architecture, with the capsular-specific region 2 genes outside of regions 1 and 3. If similar loci exist with additional novel region 2 genes after the end of the loci included in the DB, they will look typeable, but the extra region 2 genes may not be captured. We recommend additional inspection of atypical loci marked as atypical in the DB K-type field that will appear in the Kaptive output. Please refer to the Kaptive documentation for general advice on interpreting Kaptive outputs. Kaptive<sup>1</sup> version 3 https://kaptive.readthedocs.io/en/latest/
 
 The K-loci genes were annotated using bakta 1.10.4 and panaroo 1.5.2 from https://github.com/oschwengers/bakta<sup>[18]</sup> and https://github.com/gtonkinhill/panaroo<sup>[19]</sup> to give consistent annotation across the DB. Non-capsular IS-element-associated annotations, but not sequence, have been removed.
@@ -26,7 +27,12 @@ The K-loci genes were annotated using bakta 1.10.4 and panaroo 1.5.2 from https:
 #### Adding novel K-loci
 Please contact rebeccgl@uio.no or log an issue on this GitHub repository to have novel alleles added to the database. Alternatively, use the provided EC-K-typing/DB/panaroo_refset/gffs and panaroo-generate-gff to annotate your locus with the database gene cluster names and use the K-gff_to_gbk.py script to generate an in-house Kaptive database from the gffs.
 
-#### Cite
+###How to use the database
+K-typing database is formatted for use with the tool Kaptive<sup>[1]</sup> version 3.0.0b5
+Quick start: kaptive assembly EC-K-typing_group2and3_v3.0.0.gbk your_assembly.fasta
+For more information read https://kaptive.readthedocs.io/en/latest/
+
+### Cite
 Gladstone, R. A. et al. Groups 2 and 3 ABC-transporter-dependent capsular K-loci contribute significantly to variation in the invasive potential of _Escherichia coli_. 2025 medRxiv https://doi.org/10.1101/2024.11.22.24317484
 
 Stanton TD, Hetland MAK, Löhr IH, Holt KE, Wyres KL. Fast and accurate in silico antigen typing with Kaptive 3. Microb Genom 2025;11:001428.
