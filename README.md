@@ -5,7 +5,7 @@ KL nomenclature now reflects K-phenotype numbering with unknown phenotypes as KL
 For runs prior to 6/11/25, we recommend rerunning kaptive with the lastest version of the DB or using the lookup table provided in EC-K-typing/supplementary.
 
 ###	Information
-This database allows the _in-silico_ K-typing of _E. coli_ Group 2 and Group 3 (ABC-transporter dependent) K-loci.
+This database allows the _in-silico_ K-typing of _E. coli_ Group 2 and Group 3 (ABC-transporter dependent) K-loci with the tool Kaptive<sup>[1]</sup>.
 
 This database includes K-loci with unique capsular gene presence-absence patterns (excluding IS elements). It is expected to cover the majority of invasive _E. coli_ isolates; group 2 and 3 capsule prevalence is near complete in phylogroups B2 and D, whilst phylogroups A, B1, and C have a lower prevalence. ~50,000 _E. coli_ genomes were screened from bloodstream infections (human), carriage (human and animal), from Europe, North America, Africa and Asia, and all G2 kpsF-positive and G3 kpsM-positive assemblies (90% kmerID) in a collection of 661k bacterial assemblies <sup>[2–12]</sup>.
 
@@ -29,7 +29,9 @@ Please contact rebeccgl@uio.no or log an issue on this GitHub repository to have
 
 ###	How to use the database
 K-typing database is formatted for use with the tool Kaptive<sup>[1]</sup> version 3.0.0b5
+
 Quick start: kaptive assembly EC-K-typing_group2and3_v3.0.0.gbk your_assembly.fasta
+
 For more information read https://kaptive.readthedocs.io/en/latest/
 
 ### Cite
