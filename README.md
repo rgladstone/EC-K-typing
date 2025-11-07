@@ -2,7 +2,7 @@
 
 ###	Database update summary V3
 KL nomenclature now reflects K-phenotype numbering with unknown phenotypes as KL110+. 
-For runs prior to 6/11/25, we recommend rerunning kaptive with the lastest version of the DB or using the lookup table provided in EC-K-typing/supplementary.
+For database v1 and v2 downloaded prior to 6/11/25, we recommend rerunning kaptive with the lastest version of the DB or using the lookup table provided in EC-K-typing/supplementary.
 
 ###	Information
 This database allows the _in-silico_ K-typing of _E. coli_ Group 2 and Group 3 (ABC-transporter dependent) K-loci with the tool Kaptive<sup>[1]</sup>.
