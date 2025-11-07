@@ -27,7 +27,7 @@ The K-loci genes were annotated using bakta 1.10.4 and panaroo 1.5.2 from https:
 #### Adding novel K-loci
 Please contact rebeccgl@uio.no or log an issue on this GitHub repository to have novel alleles added to the database. Alternatively, use the provided EC-K-typing/DB/panaroo_refset/gffs and panaroo-generate-gff to annotate your locus with the database gene cluster names and use the K-gff_to_gbk.py script to generate an in-house Kaptive database from the gffs.
 
-###How to use the database
+###	How to use the database
 K-typing database is formatted for use with the tool Kaptive<sup>[1]</sup> version 3.0.0b5
 Quick start: kaptive assembly EC-K-typing_group2and3_v3.0.0.gbk your_assembly.fasta
 For more information read https://kaptive.readthedocs.io/en/latest/
