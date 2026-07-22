@@ -1,0 +1,13 @@
+name: Release Database
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-central-workflow:
+    if: github.repository != 'tomdstanton/kaptive-db-template'
+    uses: klebgenomics/Kaptive/.github/workflows/database_cicd.yml@master
+    permissions:
+      contents: write # Pass write permissions down to the central workflow

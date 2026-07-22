@@ -1,0 +1,17 @@
+name = "Escherichia_coli_Group_2_and_3_K"
+keyword = "ecoli_kps"
+genbank = "EC-K-typing_group2and3.gbk"
+organism = "Escherichia coli"
+taxon = 562
+antigen = "Capsular polysaccharide"
+pathway = "ABC-transporter-dependant"
+prefix = "K"
+version = "3.0.1"
+id_threshold = 82.5
+doi = [ "10.1038/s41564-026-02283-w",]
+owner = "rgladstone"
+repo = "EC-K-typing"
+branch = "main"
+
+[contact]
+"Rebecca Gladstone" = "r.a.gladstone@medisin.uio.no"
