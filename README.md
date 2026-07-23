@@ -153,7 +153,6 @@ https://doi.org/10.1099/mgen.0.001428
    In silico typing maps the natural diversity of _Escherichia coli_
    transporter-dependent capsules. _Nature Microbiology_.
    2026;11:1217–1232.
-   https://doi.org/10.1038/s41564-026-02323-5
 2. Stanton TD, Hetland MAK, Löhr IH, Holt KE, Wyres KL. Fast and accurate
    in silico antigen typing with Kaptive 3. _Microbial Genomics_.
    2025;11:001428.
