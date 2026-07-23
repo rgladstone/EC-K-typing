@@ -1,0 +1,18 @@
+merged_name,curated_name,curated_description
+rfbA~~~rmlA,rmlA,Glucose-1-phosphate thymidylyltransferase RmlA
+wza~~~kpsD_5,kpsD_5,Periplasmic capsule polysaccharide export protein KpsD
+kpsS~~~kpsS_2,kpsS_2,Capsule polysaccharide export protein
+kpsS~~~kpsS_6,kpsS_6,Capsule polysaccharide modification protein KpsS
+kpsM_5~~~kpsM_6,kpsM_5_6,Capsule polysaccharide transport system permease protein KpsM
+rffD_2~~~wecC,rffD_2,UDP-N-acetyl-D-mannosamine dehydrogenase
+DB_group_98~~~wckE_2,DB_group_98_wckE_2,Putative glycosyltransferase
+kpsT_4~~~kpsT_5~~~tagH,kpsT_4_5,Capsule polysaccharide transport system ATP-binding protein KpsT
+rfbC~~~rmlC_2,rmlC_2,"dTDP-4-dehydrorhamnose 3,5-epimerase"
+kpsS~~~kpsS_5,kpsS_5,Capsule polysaccharide modification protein KpsS
+DB_group_225~~~DB_group_226,DB_group_225_226,Sugar transporter
+kpsC_5~~~kpsC,kpsC_5,Capsule polysaccharide export protein KpsC/LpsZ
+kpsE_2~~~kpsE,kpsE_2,Capsule polysaccharide export inner-membrane protein KpsE
+tagH~~~kpsT_7,kpsT_7,Capsule polysaccharide transport system ATP-binding protein KpsT
+rfbD~~~rmlD_2,rmlD_2,dTDP-4-dehydrorhamnose reductase
+ugd~~~ugd_2,ugd_2,UDP-glucose 6-dehydrogenase
+kpsC_7~~~kpsC_6,kpsC_6_7,Capsule polysaccharide biosynthesis/export protein KpsC

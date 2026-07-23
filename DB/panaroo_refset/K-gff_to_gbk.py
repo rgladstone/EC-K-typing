@@ -1,369 +1,547 @@
-import sys
+#!/usr/bin/env python3
+
+"""Convert curated EC-K-Typing GFFs into a Kaptive GenBank database."""
+
+import argparse
+import csv
 import datetime
-import os
 import re
-from Bio.Seq import Seq
-from Bio.SeqRecord import SeqRecord
-from Bio.SeqFeature import SeqFeature, FeatureLocation
-from Bio import SeqIO
+from dataclasses import dataclass
 from io import StringIO
+from pathlib import Path
 
-# --- PYTHON VERSION COMPATIBILITY NOTE ---
-# This script is designed for use with Python 3.6+ and has been tested 
-# successfully with Python 3.12.0.
-# ----------------------------------------
+from Bio import SeqIO
+from Bio.Seq import Seq
+from Bio.SeqFeature import FeatureLocation, SeqFeature
+from Bio.SeqRecord import SeqRecord
 
-def sanitize_string(s):
-    """
-    Aggressively cleans a string by replacing all non-standard whitespace 
-    and removing non-printable ASCII characters to prevent parser errors.
-    """
-    if not isinstance(s, str):
-        return s
-    
-    # 1. Replace all non-standard whitespace with a single standard space
-    s = re.sub(r'\s+', ' ', s).strip()
-    
-    # 2. Remove any remaining control or non-printable ASCII characters
-    s = ''.join(char for char in s if 32 <= ord(char) <= 126 or ord(char) == 10)
-    
-    return s
 
-def extract_accession_and_kl_type(filename):
-    """
-    Extracts the Accession ID and KL type from the filename. 
-    Applies sanitization to ensure clean output.
-    """
-    full_base_name = os.path.splitext(filename)[0]
-    kl_type = "KL_DEFAULT"
+METADATA_COLUMNS = {"locus", "phenotype", "note"}
 
-    default_accession = full_base_name.replace('_panarooupdated', '').replace('_noIS', '')
-    accession = default_accession
 
-    kl_match = re.search(r'(KL[A-Z0-9]+)', full_base_name, re.IGNORECASE)
-    panaroo_match = re.search(r'_panarooupdated', full_base_name)
+@dataclass
+class LocusMetadata:
+    phenotype: str = ""
+    note: str = ""
 
-    if kl_match:
-        kl_type = sanitize_string(kl_match.group(1).upper())
-    
-    if kl_match and panaroo_match:
-        kl_end_index = kl_match.end()
-        panaroo_start_index = panaroo_match.start()
 
-        if kl_end_index < panaroo_start_index:
-            accession_raw = full_base_name[kl_end_index:panaroo_start_index]
-            extracted_accession = accession_raw.strip('_')
+@dataclass
+class ParsedGff:
+    path: Path
+    locus: str
+    phenotype: str
+    accession: str
+    sequence: str
+    features: list[SeqFeature]
+    skipped_candidates: list[tuple[str, int]]
 
-            if extracted_accession:
-                accession = sanitize_string(extracted_accession)
 
-    return accession, kl_type
+def parse_arguments() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description=(
+            "Convert curated Panaroo GFF records to a multi-record GenBank "
+            "database compatible with Kaptive."
+        )
+    )
+    parser.add_argument(
+        "gffs",
+        nargs="+",
+        type=Path,
+        help="Curated GFF files to include in the database.",
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        required=True,
+        type=Path,
+        help="Output GenBank database path.",
+    )
+    parser.add_argument(
+        "--metadata",
+        type=Path,
+        help=(
+            "Optional CSV containing exactly: locus, phenotype, note. "
+            "Phenotype values override filename-derived K types."
+        ),
+    )
+    parser.add_argument(
+        "--locus-version",
+        default="v2",
+        help="Per-locus VERSION suffix (default: v2).",
+    )
+    parser.add_argument(
+        "--line-ending",
+        choices=("crlf", "lf"),
+        default="crlf",
+        help=(
+            "Output line ending. CRLF preserves the existing repository "
+            "database format (default: crlf)."
+        ),
+    )
+    return parser.parse_args()
 
-def parse_k_type(filename):
-    """
-    Extracts the K type (e.g., K2Ab or K96-K54) from the filename.
-    """
-    match = re.search(r'(K[A-Z0-9-]+)_G', filename, re.IGNORECASE)
-    if match:
-        return sanitize_string(match.group(1).upper())
-    return None
 
-def apply_post_processing_fixes(genbank_content, locus_name, new_version, new_date, comment_text):
-    """
-    Applies all header fixes (LOCUS, VERSION, COMMENT) and critical feature alignment fixes.
-    This function processes the raw GenBank string for a single record.
-    """
-    
-    # CRITICAL FIX 1: Explicitly replace non-breaking spaces (\xa0)
-    genbank_content = genbank_content.replace('\xa0', ' ')
-    
-    # CRITICAL FIX 4: Replace ANY non-ASCII character with a standard space
-    genbank_content = re.sub(r'[^\x00-\x7F\s]+', ' ', genbank_content)
-
-    # --- CRITICAL FIX 3 (ULTIMATE): FORCE PURE ASCII INDENTATION OVERWRITE ---
-    
-    # Feature line fix: Overwrites the start of 'source' and 'CDS' lines with 5 clean spaces.
-    genbank_content = re.sub(
-        r'^\s*(source|CDS)(.*)', 
-        r'     \1\2', 
-        genbank_content, 
-        flags=re.MULTILINE
+def sanitize(value: str) -> str:
+    value = re.sub(r"\s+", " ", str(value)).strip()
+    return "".join(
+        character
+        for character in value
+        if 32 <= ord(character) <= 126
     )
 
-    # Qualifier line fix: Overwrites the start of qualifier lines with 21 clean spaces.
-    genbank_content = re.sub(
-        r'^\s*(/[a-zA-Z0-9_]+="?.*)', 
-        r'                     \1', 
-        genbank_content, 
-        flags=re.MULTILINE
+
+def parse_attributes(
+    value: str,
+    path: Path,
+    line_number: int,
+) -> dict[str, str]:
+    attributes: dict[str, str] = {}
+
+    for field in value.split(";"):
+        if not field:
+            continue
+        if "=" not in field:
+            raise ValueError(
+                f"Malformed attribute in {path}:{line_number}: {field!r}"
+            )
+        key, item = field.split("=", 1)
+        attributes[key] = item
+
+    return attributes
+
+
+def filename_metadata(path: Path) -> tuple[str, str]:
+    locus_match = re.search(r"(KL\d+)", path.name, re.IGNORECASE)
+    if not locus_match:
+        raise ValueError(f"Cannot derive KL identifier from {path.name}")
+
+    locus = locus_match.group(1).upper()
+    phenotype_match = re.match(
+        r"(K[A-Z0-9-]+)_G[23]_",
+        path.name,
+        re.IGNORECASE,
     )
-    # --------------------------------------------------------------------------
+    phenotype = phenotype_match.group(1).upper() if phenotype_match else ""
 
-    lines = genbank_content.splitlines()
-    output_lines = []
+    return locus, phenotype
 
-    # Format the comment text (using sanitized lines)
-    genbank_comment_lines = []
-    comment_prefix = "COMMENT     "
-    continuation_prefix = " " * 12
-    for i, line in enumerate(comment_text.split('\n')):
-        clean_line = sanitize_string(line)
-        if i == 0:
-            genbank_comment_lines.append(f"{comment_prefix}{clean_line}")
-        else:
-            genbank_comment_lines.append(f"{continuation_prefix}{clean_line}")
 
-    version_inserted = False
-    comment_inserted = False
+def accession_from_fasta_id(fasta_id: str, locus: str, path: Path) -> str:
+    match = re.search(
+        rf"(?:^|_){re.escape(locus)}_(.+)$",
+        fasta_id,
+        re.IGNORECASE,
+    )
 
-    for line in lines:
+    if not match:
+        raise ValueError(
+            f"Cannot derive accession after {locus} from FASTA identifier "
+            f"{fasta_id!r} in {path}"
+        )
 
-        if line.startswith('ACCESSION'):
-            output_lines.append(line)
-            # FORCE correct VERSION insertion
-            output_lines.append(f"VERSION     {new_version}")
-            version_inserted = True
+    accession = sanitize(match.group(1))
+    if not accession:
+        raise ValueError(f"Empty accession in FASTA identifier: {fasta_id}")
 
-        elif line.startswith('VERSION'):
-            if version_inserted:
+    return accession
+
+
+def parse_gff(path: Path) -> ParsedGff:
+    if not path.is_file():
+        raise FileNotFoundError(path)
+
+    locus, phenotype = filename_metadata(path)
+    features: list[SeqFeature] = []
+    fasta_headers: list[str] = []
+    sequence_parts: list[str] = []
+    skipped_candidates: list[tuple[str, int]] = []
+    in_fasta = False
+
+    with path.open(encoding="utf-8") as handle:
+        for line_number, raw_line in enumerate(handle, 1):
+            line = raw_line.rstrip("\r\n")
+
+            if line == "##FASTA":
+                in_fasta = True
                 continue
-            else:
-                output_lines.append(line)
 
-        elif line.startswith('LOCUS'):
-            match = re.search(r'LOCUS\s+.*?\s+(\d+)\s+bp', line) 
+            if in_fasta:
+                if line.startswith(">"):
+                    fasta_headers.append(line[1:].split()[0])
+                elif line:
+                    sequence_parts.append(line.strip())
+                continue
 
-            if match:
-                length = match.group(1)
-                required_padding = 45 - (9 + len(locus_name))
-                if required_padding < 1:
-                    required_padding = 1
+            if not line or line.startswith("#"):
+                continue
 
-                new_locus_line = (
-                    f"LOCUS       {locus_name}"
-                    f"{' ' * required_padding}{length:>6} bp    DNA     linear   UNK {new_date}"
+            fields = line.split("\t")
+            if len(fields) != 9:
+                raise ValueError(
+                    f"Expected 9 GFF columns in {path}:{line_number}; "
+                    f"found {len(fields)}"
                 )
-                output_lines.append(new_locus_line)
-            else:
-                output_lines.append(line)
 
-        elif line.startswith('KEYWORDS') or line.startswith('SOURCE') or line.startswith('FEATURES'):
-            if not comment_inserted:
-                 output_lines.extend(genbank_comment_lines)
-                 comment_inserted = True
-            output_lines.append(line)
-        
-        elif line.startswith('//'):
-            # This is the separator line, let Biopython handle it, but trim surrounding whitespace
-            output_lines.append(line.strip())
+            feature_type = fields[2]
+            if feature_type not in {"CDS", "candidate_gene"}:
+                continue
 
-        else:
-            output_lines.append(line)
+            try:
+                start = int(fields[3])
+                end = int(fields[4])
+            except ValueError as error:
+                raise ValueError(
+                    f"Invalid coordinates in {path}:{line_number}"
+                ) from error
 
-    return "\n".join(output_lines)
+            if start < 1 or end < start:
+                raise ValueError(
+                    f"Invalid interval in {path}:{line_number}: "
+                    f"{start}-{end}"
+                )
 
-def process_gff_to_cleaned_string(gff_filename, base_version='v2'):
-    """
-    Converts a single GFF file to a fully-cleaned GenBank record string.
-    """
-    # --- Custom Derivation & Formatting ---
-    ACCESSION_ID, KL_TYPE = extract_accession_and_kl_type(gff_filename)
-    
-    FULL_LOCUS_NAME = os.path.splitext(gff_filename)[0]
-    FULL_LOCUS_NAME = FULL_LOCUS_NAME.replace('_panarooupdated', '').replace('_noIS', '')
-    FULL_LOCUS_NAME = sanitize_string(FULL_LOCUS_NAME)
+            strand_text = fields[6]
+            if strand_text not in {"+", "-"}:
+                raise ValueError(
+                    f"Invalid strand in {path}:{line_number}: "
+                    f"{strand_text!r}"
+                )
 
-    LOCUS_DISPLAY_NAME = sanitize_string(f"{KL_TYPE}_{ACCESSION_ID}")
+            attributes = parse_attributes(
+                fields[8],
+                path,
+                line_number,
+            )
+            gene = sanitize(
+                attributes.get("name", attributes.get("Name", ""))
+            )
+            product = sanitize(
+                attributes.get(
+                    "description",
+                    attributes.get("product", ""),
+                )
+            )
 
-    K_TYPE_FULL = parse_k_type(gff_filename) 
-    K_TYPE_SEROTYPE = K_TYPE_FULL.split('-')[0] if K_TYPE_FULL and '-' in K_TYPE_FULL else K_TYPE_FULL
-    
-    GB_VERSION = sanitize_string(f"{KL_TYPE}_{base_version}")
-    
-    CURRENT_DATE = datetime.date.today().strftime("%d-%b-%Y").upper()
+            if gene in {"", "No_name"}:
+                raise ValueError(
+                    f"Missing curated gene name in {path}:{line_number}"
+                )
 
-    CUSTOM_COMMENT = (
-        "Annotated using Bakta v1.10.4 and panaroo v1.5.2 from\n"
-        "https://github.com/oschwengers/bakta and\n"
-        "https://github.com/gtonkinhill/panaroo"
-    )
+            if "~~~" in gene:
+                raise ValueError(
+                    f"Merged gene name remains in {path}:{line_number}"
+                )
 
-    base_def = "Escherichia coli DNA, capsular polysaccharide synthesis gene cluster"
-    full_def = f"{base_def}, serotype: {K_TYPE_SEROTYPE}".rstrip('. ') if K_TYPE_SEROTYPE else base_def.rstrip('. ')
-    full_def = sanitize_string(full_def)
-
-    TAX_LINEAGE = (
-        "Bacteria; Proteobacteria; Gammaproteobacteria; Enterobacteriales;"
-        " Enterobacteriaceae; Escherichia."
-    )
-
-    # --- GFF Parsing and SeqRecord Creation ---
-    features = []
-    sequence = ""
-    in_fasta_block = False
-    cds_counter = 1
-
-    try:
-        with open(gff_filename, 'r') as f:
-            for line in f:
-                line = line.strip()
-                if line.startswith('##FASTA') or (line.startswith('#') and '>' in line):
-                    in_fasta_block = True
+            feature_length = end - start + 1
+            if feature_length % 3:
+                if feature_type == "candidate_gene":
+                    skipped_candidates.append((gene, feature_length))
                     continue
-                if in_fasta_block:
-                    if not line.startswith('>'):
-                        sequence += line.upper().replace(' ', '')
-                    continue
-                if not line or line.startswith('#'):
-                    continue
-                
-                parts = line.split('\t')
-                if len(parts) < 9:
-                    continue
+                raise ValueError(
+                    f"CDS length is not a multiple of three in "
+                    f"{path}:{line_number}: {gene} ({feature_length} bp)"
+                )
 
-                seqid, source_gff, feature_type, start, end, score, strand, phase, attributes = parts
-                if feature_type != 'CDS':
-                    continue
+            qualifiers = {
+                "gene": gene,
+                "product": product or "hypothetical protein",
+            }
 
-                qualifiers = {}
-                attrs = dict(item.split('=', 1) for item in attributes.split(';') if '=' in item)
-
-                clean_kl_type = sanitize_string(KL_TYPE)
-                new_locus_tag = f"{clean_kl_type}_{cds_counter:05d}"
-                qualifiers['locus_tag'] = new_locus_tag
-                cds_counter += 1
-
-                if 'name' in attrs:
-                    qualifiers['gene'] = sanitize_string(attrs['name'])
-                if 'description' in attrs:
-                    qualifiers['product'] = sanitize_string(attrs['description'])
-
-                loc_start = int(start) - 1
-                loc_end = int(end)
-                loc_strand = 1 if strand == '+' else -1
-
-                feature = SeqFeature(
-                    FeatureLocation(loc_start, loc_end, strand=loc_strand),
+            features.append(
+                SeqFeature(
+                    FeatureLocation(
+                        start - 1,
+                        end,
+                        strand=1 if strand_text == "+" else -1,
+                    ),
                     type="CDS",
-                    qualifiers=qualifiers
+                    qualifiers=qualifiers,
                 )
-                features.append(feature)
-    except FileNotFoundError:
-        print(f"\nError: File '{gff_filename}' not found. Skipping.")
-        return None
-    except Exception as e:
-        print(f"\nError processing file '{gff_filename}': {e}. Skipping.")
-        return None
+            )
 
+    if len(fasta_headers) != 1:
+        raise ValueError(
+            f"Expected one FASTA sequence in {path}; "
+            f"found {len(fasta_headers)}"
+        )
+
+    sequence = "".join(sequence_parts).upper()
     if not sequence:
-        print(f"\nError: Could not extract DNA sequence from the GFF file's FASTA block in '{gff_filename}'. Skipping.")
-        return None
+        raise ValueError(f"Empty FASTA sequence in {path}")
 
-    seq_object = Seq(sequence)
+    if "N" in sequence:
+        raise ValueError(f"FASTA sequence contains N bases: {path}")
+
+    if any(int(feature.location.end) > len(sequence) for feature in features):
+        raise ValueError(f"A feature extends beyond the FASTA sequence: {path}")
+
+    fasta_id = fasta_headers[0]
+    fasta_locus_match = re.search(r"(KL\d+)", fasta_id, re.IGNORECASE)
+
+    if not fasta_locus_match:
+        raise ValueError(
+            f"Cannot derive KL identifier from FASTA ID {fasta_id!r}"
+        )
+
+    fasta_locus = fasta_locus_match.group(1).upper()
+    if fasta_locus != locus:
+        raise ValueError(
+            f"Filename locus {locus} does not match FASTA locus "
+            f"{fasta_locus} in {path}"
+        )
+
+    accession = accession_from_fasta_id(fasta_id, locus, path)
+
+    return ParsedGff(
+        path=path,
+        locus=locus,
+        phenotype=phenotype,
+        accession=accession,
+        sequence=sequence,
+        features=features,
+        skipped_candidates=skipped_candidates,
+    )
+
+
+def load_metadata(path: Path | None) -> dict[str, LocusMetadata]:
+    if path is None:
+        return {}
+
+    if not path.is_file():
+        raise FileNotFoundError(path)
+
+    with path.open(newline="", encoding="utf-8-sig") as handle:
+        reader = csv.DictReader(handle)
+        if set(reader.fieldnames or []) != METADATA_COLUMNS:
+            raise ValueError(
+                f"{path} must contain exactly these columns: "
+                + ", ".join(sorted(METADATA_COLUMNS))
+            )
+        rows = list(reader)
+
+    metadata: dict[str, LocusMetadata] = {}
+
+    for row in rows:
+        locus = row["locus"].strip().upper()
+        if not re.fullmatch(r"KL\d+", locus):
+            raise ValueError(f"Invalid locus in {path}: {locus!r}")
+        if locus in metadata:
+            raise ValueError(f"Duplicate metadata locus: {locus}")
+
+        metadata[locus] = LocusMetadata(
+            phenotype=sanitize(row["phenotype"]),
+            note=sanitize(row["note"]),
+        )
+
+    return metadata
+
+
+def add_locus_tags(locus: ParsedGff) -> None:
+    for position, feature in enumerate(locus.features, 1):
+        feature.qualifiers["locus_tag"] = (
+            f"{locus.locus}_{position:05d}"
+        )
+
+
+def make_record(
+    locus: ParsedGff,
+    metadata: LocusMetadata,
+) -> SeqRecord:
+    phenotype = metadata.phenotype or locus.phenotype
+    description = (
+        "Escherichia coli DNA, capsular polysaccharide synthesis "
+        "gene cluster"
+    )
+    if phenotype:
+        description += f", serotype: {phenotype}"
 
     record = SeqRecord(
-        seq_object,
-        id=sanitize_string(ACCESSION_ID),
-        name=sanitize_string(LOCUS_DISPLAY_NAME),
-        description=full_def 
+        Seq(locus.sequence),
+        id=locus.accession,
+        name=f"{locus.locus}_{locus.accession}",
+        description=description,
     )
+    record.annotations["molecule_type"] = "DNA"
+    record.annotations["source"] = "Escherichia coli"
+    record.annotations["organism"] = "Escherichia coli"
+    record.annotations["taxonomy"] = [
+        "Bacteria",
+        "Proteobacteria",
+        "Gammaproteobacteria",
+        "Enterobacteriales",
+        "Enterobacteriaceae",
+        "Escherichia",
+    ]
 
-    record.annotations['sequence_version'] = base_version
-    record.annotations['source'] = "Escherichia coli"
-    record.annotations['organism'] = "Escherichia coli"
-    record.annotations['taxonomy'] = TAX_LINEAGE.split('; ')
-    record.annotations['molecule_type'] = 'DNA'
+    notes = [f"K locus:{locus.locus}"]
+    if phenotype:
+        # Kaptive's default type regex captures punctuation and spaces only
+        # when the value is separated from "type:" by a space.
+        notes.append(f"K type: {phenotype}")
+    if metadata.note:
+        notes.append(metadata.note)
+    notes.append("IS-element related annotations removed")
 
-    note_list = [f"K locus:{KL_TYPE}"]
-    source_qualifiers = {
-        "organism": sanitize_string("Escherichia coli"),
-        "mol_type": sanitize_string("genomic DNA"),
-        "db_xref": sanitize_string("taxon:562"),
+    source_qualifiers: dict[str, object] = {
+        "organism": "Escherichia coli",
+        "mol_type": "genomic DNA",
+        "db_xref": "taxon:562",
+        "note": notes,
     }
 
-    if K_TYPE_SEROTYPE:
-        source_qualifiers["serotype"] = sanitize_string(K_TYPE_SEROTYPE)
-    
-    if K_TYPE_FULL:
-        note_list.append(f"K type:{K_TYPE_FULL}")
+    if phenotype.upper().startswith("K"):
+        source_qualifiers["serotype"] = phenotype
 
-    note_list.append("IS-element related annotations removed")
-    
-    source_qualifiers["note"] = [sanitize_string(n) for n in note_list]
-
-    source_feature = SeqFeature(
-        FeatureLocation(0, len(sequence), strand=1),
+    source = SeqFeature(
+        FeatureLocation(0, len(locus.sequence), strand=1),
         type="source",
-        qualifiers=source_qualifiers
+        qualifiers=source_qualifiers,
     )
-    record.features.append(source_feature)
-    record.features.extend(features)
 
-    # 4. Write to buffer
-    handle = StringIO()
-    # Write a single record. SeqIO adds the final '//'
-    SeqIO.write(record, handle, "genbank")
-    raw_genbank_content = handle.getvalue()
+    add_locus_tags(locus)
+    record.features = [source, *locus.features]
+    return record
 
-    # 5. POST-PROCESS: Apply all the critical fixes to the single record string
-    final_genbank_content = apply_post_processing_fixes(
-        raw_genbank_content,
-        LOCUS_DISPLAY_NAME,
-        GB_VERSION,
-        CURRENT_DATE,
-        CUSTOM_COMMENT
+
+def format_record(
+    record: SeqRecord,
+    locus: str,
+    accession: str,
+    locus_version: str,
+    date: str,
+) -> str:
+    buffer = StringIO()
+    SeqIO.write(record, buffer, "genbank")
+    lines = buffer.getvalue().splitlines()
+    output: list[str] = []
+    version_written = False
+    comment_written = False
+    comment = [
+        "COMMENT     Annotation reconciled using Bakta v1.10.x, Panaroo",
+        "            v1.5.2 for clustering and Panaroo v1.6.0 for GFF",
+        "            generation.",
+        "            https://github.com/oschwengers/bakta",
+        "            https://github.com/gtonkinhill/panaroo",
+    ]
+
+    for line in lines:
+        if line.startswith("LOCUS"):
+            locus_name = f"{locus}_{accession}"
+            padding = max(1, 45 - (9 + len(locus_name)))
+            length = len(record.seq)
+            output.append(
+                f"LOCUS       {locus_name}"
+                f"{' ' * padding}{length:>6} bp    DNA     linear   "
+                f"UNK {date}"
+            )
+        elif line.startswith("ACCESSION"):
+            output.append(line)
+            output.append(f"VERSION     {locus}_{locus_version}")
+            version_written = True
+        elif line.startswith("VERSION") and version_written:
+            continue
+        elif (
+            line.startswith(("KEYWORDS", "SOURCE", "FEATURES"))
+            and not comment_written
+        ):
+            output.extend(comment)
+            output.append(line)
+            comment_written = True
+        elif line.startswith("//"):
+            output.append("//")
+        else:
+            output.append(line)
+
+    return "\n".join(output)
+
+
+def main() -> None:
+    args = parse_arguments()
+
+    if args.output.exists():
+        raise FileExistsError(
+            f"Refusing to overwrite existing output: {args.output}"
+        )
+
+    metadata = load_metadata(args.metadata)
+    loci = [parse_gff(path) for path in args.gffs]
+
+    locus_names = [locus.locus for locus in loci]
+    accessions = [locus.accession for locus in loci]
+
+    if len(locus_names) != len(set(locus_names)):
+        duplicates = sorted(
+            name
+            for name in set(locus_names)
+            if locus_names.count(name) > 1
+        )
+        raise ValueError(
+            "Duplicate KL identifiers: " + ", ".join(duplicates)
+        )
+
+    if len(accessions) != len(set(accessions)):
+        duplicates = sorted(
+            accession
+            for accession in set(accessions)
+            if accessions.count(accession) > 1
+        )
+        raise ValueError(
+            "Duplicate accessions: " + ", ".join(duplicates)
+        )
+
+    unknown_metadata = set(metadata) - set(locus_names)
+    if unknown_metadata:
+        raise ValueError(
+            "Metadata loci absent from GFF inputs: "
+            + ", ".join(sorted(unknown_metadata))
+        )
+
+    date = datetime.date.today().strftime("%d-%b-%Y").upper()
+    records = [
+        format_record(
+            make_record(locus, metadata.get(locus.locus, LocusMetadata())),
+            locus.locus,
+            locus.accession,
+            args.locus_version,
+            date,
+        )
+        for locus in loci
+    ]
+
+    text = "\n".join(records)
+    if args.line_ending == "crlf":
+        text = text.replace("\n", "\r\n")
+
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    with args.output.open("w", encoding="ascii", newline="") as handle:
+        handle.write(text)
+
+    print(f"Records: {len(loci)}")
+    print(f"CDS features: {sum(len(locus.features) for locus in loci)}")
+    print(
+        "Invalid candidate features skipped: "
+        + str(sum(len(locus.skipped_candidates) for locus in loci))
     )
-    
-    return final_genbank_content
+    for locus in loci:
+        for gene, length in locus.skipped_candidates:
+            print(
+                f"SKIPPED\t{locus.locus}\t{gene}\t{length}\t"
+                "not a multiple of three"
+            )
+    print(
+        "Phenotype records: "
+        + str(
+            sum(
+                bool(
+                    metadata.get(locus.locus, LocusMetadata()).phenotype
+                    or locus.phenotype
+                )
+                for locus in loci
+            )
+        )
+    )
+    print(f"Wrote: {args.output}")
 
 
-# --- Command Line Execution ---
-if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print("Usage: python K-gff_to_gbk_v5.py <GFF_FILENAME_1> [<GFF_FILENAME_2> ...] or python K-gff_to_gbk_v5.py *.gff")
-        sys.exit(1)
-
-    gff_files = sys.argv[1:]
-    all_genbank_content = ""
-    
-    # Process each GFF file one by one
-    for gff_file in gff_files:
-        print(f"\n--- Processing file: {gff_file} ---")
-        cleaned_content = process_gff_to_cleaned_string(gff_file, base_version='v2')
-        
-        if cleaned_content:
-            if all_genbank_content:
-                # CRITICAL FIX for //LOCUS: Ensure a newline separates the previous "//" from the next "LOCUS"
-                # The GenBank standard requires the separator to be on its own line: //\nLOCUS
-                all_genbank_content += "\n" + cleaned_content
-            else:
-                all_genbank_content = cleaned_content
-        
-    
-    # 6. Write the final master GenBank database file
-    if all_genbank_content:
-        # Set the custom output path
-        output_filename = "new_DB/EC-K-typing_group2and3_vX.X.X.gbk"
-        
-        # Ensure the output directory exists
-        output_dir = os.path.dirname(output_filename)
-        if output_dir and not os.path.exists(output_dir):
-            try:
-                os.makedirs(output_dir)
-                print(f"Created directory: {output_dir}")
-            except OSError as e:
-                print(f"Error creating directory {output_dir}: {e}")
-                sys.exit(1)
-        
-        # Ensure the final output file does not have an extra newline at the end of the last record's "//"
-        final_output = all_genbank_content.strip()
-
-        try:
-            # CRITICAL FIX 2: Force ASCII encoding on write to eliminate ALL non-standard characters
-            with open(output_filename, "w", encoding='ascii', errors='replace') as out_handle:
-                out_handle.write(final_output)
-            
-            print(f"\n\n✅ Final Database Successfully Generated!")
-            print(f"The multi-record GenBank file '{output_filename}' has been created with corrected separators and whitespace alignment.")
-        except Exception as e:
-            print(f"\nError writing Final GenBank file: {e}")
+if __name__ == "__main__":
+    main()

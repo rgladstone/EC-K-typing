@@ -5,20 +5,20 @@
 ##Database: v5.1 full
 ##DOI: 10.1099/mgen.0.000685
 ##URL: github.com/oschwengers/bakta
-##sequence-region G2_KL124_GCA_964049275 1 14820
-G2_KL124_GCA_964049275	Panaroo	CDS	1	984	.	+	0	ID=MOPDFO_00257;name=kpsF;locus_tag=MOPDFO_00257;description=Polysialic acid capsule expression protein;pangenome_id=635;panaroo_ID=14_0_0;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
-G2_KL124_GCA_964049275	Panaroo	CDS	1056	2204	.	+	0	ID=MOPDFO_00258;name=kpsE;locus_tag=MOPDFO_00258;description=Capsule polysaccharide export inner-membrane protein;pangenome_id=274;panaroo_ID=14_0_1;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
-G2_KL124_GCA_964049275	Panaroo	CDS	2228	3904	.	+	0	ID=MOPDFO_00259;name=kpsD;locus_tag=MOPDFO_00259;description=Polysialic acid transport protein;pangenome_id=120;panaroo_ID=14_0_2;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
-G2_KL124_GCA_964049275	Panaroo	CDS	3914	4654	.	+	0	ID=MOPDFO_00260;name=kpsU;locus_tag=MOPDFO_00260;description=3-deoxy-manno-octulosonate cytidylyltransferase;pangenome_id=624;panaroo_ID=14_0_3;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
-G2_KL124_GCA_964049275	Panaroo	CDS	4651	6678	.	+	0	ID=MOPDFO_00261;name=kpsC;locus_tag=MOPDFO_00261;description=Capsule polysaccharide export protein KpsC;pangenome_id=661;panaroo_ID=14_0_4;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
-G2_KL124_GCA_964049275	Panaroo	CDS	6713	7888	.	+	0	ID=MOPDFO_00262;name=kpsS;locus_tag=MOPDFO_00262;description=kpsS-protein;pangenome_id=677;panaroo_ID=14_0_5;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
-G2_KL124_GCA_964049275	Panaroo	CDS	7981	9948	.	-	0	ID=MOPDFO_00263;name=DB_group_52;locus_tag=MOPDFO_00263;description=Glycosyl transferase family 1 domain-containing protein;pangenome_id=103;panaroo_ID=14_0_6;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
-G2_KL124_GCA_964049275	Panaroo	CDS	9966	12311	.	-	0	ID=MOPDFO_00264;name=DB_group_23;locus_tag=MOPDFO_00264;description=Beta-3-deoxy-D-manno-oct-2-ulosonic acid transferase;pangenome_id=45;panaroo_ID=14_0_7;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
-G2_KL124_GCA_964049275	Panaroo	CDS	12335	13357	.	-	0	ID=MOPDFO_00265;name=kfoA;locus_tag=MOPDFO_00265;description=UDP-glucose/galactose-4-epimerase;pangenome_id=668;panaroo_ID=14_0_8;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
-G2_KL124_GCA_964049275	Panaroo	CDS	13379	14047	.	-	0	ID=MOPDFO_00266;name=kpsT;locus_tag=MOPDFO_00266;description=Polysialic acid transport ATP-binding protein KpsT;pangenome_id=713;panaroo_ID=14_0_9;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
-G2_KL124_GCA_964049275	Panaroo	CDS	14044	14820	.	-	0	ID=MOPDFO_00267;name=kpsM;locus_tag=MOPDFO_00267;description=polysialic-acid-transport-protein-KpsM;pangenome_id=709;panaroo_ID=14_0_10;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
+##sequence-region G2_KL6_GCA_964049275 1 14820
+G2_KL6_GCA_964049275	Panaroo	CDS	1	984	.	+	0	ID=MOPDFO_00257;name=kpsF;locus_tag=MOPDFO_00257;description=Polysialic acid capsule expression protein;pangenome_id=920;panaroo_id=99_0_0;panaroo_gene_cluster=kpsF;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
+G2_KL6_GCA_964049275	Panaroo	CDS	1056	2204	.	+	0	ID=MOPDFO_00258;name=kpsE;locus_tag=MOPDFO_00258;description=Capsule polysaccharide export inner-membrane protein;pangenome_id=864;panaroo_id=99_0_1;panaroo_gene_cluster=kpsE;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
+G2_KL6_GCA_964049275	Panaroo	CDS	2228	3904	.	+	0	ID=MOPDFO_00259;name=kpsD;locus_tag=MOPDFO_00259;description=Polysialic acid transport protein;pangenome_id=148;panaroo_id=99_0_2;panaroo_gene_cluster=kpsD;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
+G2_KL6_GCA_964049275	Panaroo	CDS	3914	4654	.	+	0	ID=MOPDFO_00260;name=kpsU;locus_tag=MOPDFO_00260;description=3-deoxy-manno-octulosonate cytidylyltransferase;pangenome_id=865;panaroo_id=99_0_3;panaroo_gene_cluster=kpsU;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
+G2_KL6_GCA_964049275	Panaroo	CDS	4651	6678	.	+	0	ID=MOPDFO_00261;name=kpsC;locus_tag=MOPDFO_00261;description=Capsule polysaccharide export protein KpsC;pangenome_id=921;panaroo_id=99_0_4;panaroo_gene_cluster=kpsC;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
+G2_KL6_GCA_964049275	Panaroo	CDS	6713	7888	.	+	0	ID=MOPDFO_00262;name=kpsS;locus_tag=MOPDFO_00262;description=kpsS-protein;pangenome_id=947;panaroo_id=99_0_5;panaroo_gene_cluster=kpsS;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
+G2_KL6_GCA_964049275	Panaroo	CDS	7981	9948	.	-	0	ID=MOPDFO_00263;name=DB_group_52;locus_tag=MOPDFO_00263;description=Glycosyl transferase family 1 domain-containing protein;pangenome_id=128;panaroo_id=99_0_6;panaroo_gene_cluster=DB_group_52;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
+G2_KL6_GCA_964049275	Panaroo	CDS	9966	12311	.	-	0	ID=MOPDFO_00264;name=DB_group_23;locus_tag=MOPDFO_00264;description=Beta-3-deoxy-D-manno-oct-2-ulosonic acid transferase;pangenome_id=54;panaroo_id=99_0_7;panaroo_gene_cluster=DB_group_23;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
+G2_KL6_GCA_964049275	Panaroo	CDS	12335	13357	.	-	0	ID=MOPDFO_00265;name=kfoA;locus_tag=MOPDFO_00265;description=UDP-glucose/galactose-4-epimerase;pangenome_id=931;panaroo_id=99_0_8;panaroo_gene_cluster=kfoA;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
+G2_KL6_GCA_964049275	Panaroo	CDS	13379	14047	.	-	0	ID=MOPDFO_00266;name=kpsT;locus_tag=MOPDFO_00266;description=Polysialic acid transport ATP-binding protein KpsT;pangenome_id=1015;panaroo_id=99_0_9;panaroo_gene_cluster=kpsT;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
+G2_KL6_GCA_964049275	Panaroo	CDS	14044	14820	.	-	0	ID=MOPDFO_00267;name=kpsM;locus_tag=MOPDFO_00267;description=polysialic-acid-transport-protein-KpsM;pangenome_id=1001;panaroo_id=99_0_10;panaroo_gene_cluster=kpsM;eC_number=None;prepanaroo_inference=Unknown_inference;has_pangenome_paralog=False
 ##FASTA
->G2_KL124_GCA_964049275
+>G2_KL6_GCA_964049275
 ATGTCTGAAAGACATTTACCTGATGACCAGAGCAGTACTATCGATCCATATCTAATTACC
 TCTGTTCGCCAGACTCTGGCAGAACAAGGCGCAGCATTACAAAACTTGTCTAAACAACTG
 GATTCCGGGCAGTACCAGCGTGTCCTTAATTTGATAATGAACTGTAAAGGGCACGTTATT

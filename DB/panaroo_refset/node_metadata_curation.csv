@@ -1,0 +1,364 @@
+current_name,desired_name,desired_annotation,desired_description,reason,historical_match_count
+group_0,DB_group_257,DB_group_257,Periplasmic endochitinase,assign_new_DB_group,0
+group_1,DB_group_258,DB_group_258,UDP-glucose 6-dehydrogenase,assign_new_DB_group,0
+group_2,DB_group_259,DB_group_259,Glycosyltransferase,assign_new_DB_group,0
+group_3,DB_group_260,DB_group_260,ABC transporter permease,assign_new_DB_group,0
+group_4,DB_group_261,DB_group_261,hypothetical protein,assign_new_DB_group,0
+group_5,DB_group_262,DB_group_262,hypothetical protein,assign_new_DB_group,0
+group_6,DB_group_263,DB_group_263,HAD-IA family hydrolase,assign_new_DB_group,0
+group_7,DB_group_264,DB_group_264,HAD-IA family hydrolase,assign_new_DB_group,0
+group_8,DB_group_265,DB_group_265,HAD-IA family hydrolase,assign_new_DB_group,0
+group_9,DB_group_266,DB_group_266,tail fiber domain-containing protein,assign_new_DB_group,0
+group_10,DB_group_267,DB_group_267,Antibiotic acetyltransferase,assign_new_DB_group,0
+group_11,DB_group_268,DB_group_268,Glycosyltransferase family 29 protein,assign_new_DB_group,0
+group_12,kpsF_2,kpsF_2,Arabinose 5-phosphate isomerase,restore_exact_historical_cluster,1
+group_13,DB_group_269,DB_group_269,hypothetical protein,assign_new_DB_group,0
+group_14,kpsT_10,kpsT_10,Capsule polysaccharide transport system ATP-binding protein KpsT,assign_capsule_transport_gene,0
+group_15,DB_group_271,DB_group_271,Glycosyltransferase family 2 protein,assign_new_DB_group,0
+group_16,kpsT_9,kpsT_9,Capsule polysaccharide transport system ATP-binding protein KpsT,assign_capsule_transport_gene,0
+group_17,kpsT_8,kpsT_8,Capsule polysaccharide transport system ATP-binding protein KpsT,assign_capsule_transport_gene,0
+group_18,DB_group_274,DB_group_274,ABC transporter ATP-binding protein,assign_new_DB_group,0
+group_19,kpsE_3,kpsE_3,Capsule polysaccharide export protein KpsE/RkpR,restore_exact_historical_cluster,1
+group_20,DB_group_275,DB_group_275,adenylyltransferase/cytidyltransferase family protein,assign_new_DB_group,0
+group_21,DB_group_276,DB_group_276,acyltransferase,assign_new_DB_group,0
+group_22,DB_group_277,DB_group_277,hypothetical protein,assign_new_DB_group,0
+group_23,kpsM_9,kpsM_9,Capsule polysaccharide transport system permease protein KpsM,assign_capsule_transport_gene,0
+group_24,DB_group_279,DB_group_279,acyltransferase,assign_new_DB_group,0
+group_25,kpsM_10,kpsM_10,Capsule polysaccharide transport system permease protein KpsM,assign_capsule_transport_gene,0
+group_26,kpsM_11,kpsM_11,Capsule polysaccharide transport system permease protein KpsM,assign_capsule_transport_gene,0
+group_27,DB_group_282,DB_group_282,hypothetical protein,assign_new_DB_group,0
+group_28,DB_group_283,DB_group_283,inositol monophosphatase,assign_new_DB_group,0
+group_29,DB_group_284,DB_group_284,Glycosyltransferase family 2 protein,assign_new_DB_group,0
+group_30,DB_group_285,DB_group_285,hypothetical protein,assign_new_DB_group,0
+group_31,DB_group_286,DB_group_286,Glycosyltransferase family 2 protein,assign_new_DB_group,0
+group_32,DB_group_287,DB_group_287,Glycosyltransferase,assign_new_DB_group,0
+group_33,DB_group_288,DB_group_288,hypothetical protein,assign_new_DB_group,0
+group_34,DB_group_289,DB_group_289,hypothetical protein,assign_new_DB_group,0
+group_35,DB_group_290,DB_group_290,Glycosyltransferase family 2 protein,assign_new_DB_group,0
+group_36,DB_group_291,DB_group_291,hypothetical protein,assign_new_DB_group,0
+group_37,DB_group_292,DB_group_292,hypothetical protein,assign_new_DB_group,0
+group_38,DB_group_293,DB_group_293,hypothetical protein,assign_new_DB_group,0
+group_39,DB_group_294,DB_group_294,hypothetical protein,assign_new_DB_group,0
+group_40,DB_group_295,DB_group_295,N-acetylneuraminate synthase,assign_new_DB_group,0
+group_41,DB_group_296,DB_group_296,hypothetical protein,assign_new_DB_group,0
+group_42,DB_group_297,DB_group_297,hypothetical protein,assign_new_DB_group,0
+group_43,DB_group_298,DB_group_298,hypothetical protein,assign_new_DB_group,0
+group_44,DB_group_299,DB_group_299,hypothetical protein,assign_new_DB_group,0
+group_45,DB_group_300,DB_group_300,hypothetical protein,assign_new_DB_group,0
+group_46,DB_group_301,DB_group_301,hypothetical protein,assign_new_DB_group,0
+group_47,DB_group_302,DB_group_302,hypothetical protein,assign_new_DB_group,0
+group_48,DB_group_303,DB_group_303,hypothetical protein,assign_new_DB_group,0
+group_49,DB_group_304,DB_group_304,hypothetical protein,assign_new_DB_group,0
+group_50,DB_group_305,DB_group_305,hypothetical protein,assign_new_DB_group,0
+group_51,DB_group_306,DB_group_306,hypothetical protein,assign_new_DB_group,0
+group_52,DB_group_307,DB_group_307,hypothetical protein,assign_new_DB_group,0
+group_53,DB_group_308,DB_group_308,hypothetical protein,assign_new_DB_group,0
+group_54,DB_group_309,DB_group_309,hypothetical protein,assign_new_DB_group,0
+group_55,DB_group_310,DB_group_310,hypothetical protein,assign_new_DB_group,0
+group_56,DB_group_311,DB_group_311,hypothetical protein,assign_new_DB_group,0
+group_57,DB_group_312,DB_group_312,hypothetical protein,assign_new_DB_group,0
+group_58,DB_group_313,DB_group_313,hypothetical protein,assign_new_DB_group,0
+group_59,DB_group_314,DB_group_314,hypothetical protein,assign_new_DB_group,0
+group_60,DB_group_315,DB_group_315,hypothetical protein,assign_new_DB_group,0
+group_61,DB_group_316,DB_group_316,hypothetical protein,assign_new_DB_group,0
+group_62,DB_group_317,DB_group_317,hypothetical protein,assign_new_DB_group,0
+group_63,DB_group_318,DB_group_318,hypothetical protein,assign_new_DB_group,0
+group_64,DB_group_319,DB_group_319,hypothetical protein,assign_new_DB_group,0
+group_65,DB_group_320,DB_group_320,hypothetical protein,assign_new_DB_group,0
+group_66,DB_group_321,DB_group_321,hypothetical protein,assign_new_DB_group,0
+group_67,DB_group_322,DB_group_322,hypothetical protein,assign_new_DB_group,0
+group_68,DB_group_323,DB_group_323,hypothetical protein,assign_new_DB_group,0
+group_69,DB_group_324,DB_group_324,hypothetical protein,assign_new_DB_group,0
+group_70,DB_group_325,DB_group_325,hypothetical protein,assign_new_DB_group,0
+group_71,DB_group_326,DB_group_326,hypothetical protein,assign_new_DB_group,0
+group_72,DB_group_327,DB_group_327,hypothetical protein,assign_new_DB_group,0
+group_73,DB_group_328,DB_group_328,hypothetical protein,assign_new_DB_group,0
+group_74,DB_group_329,DB_group_329,Glycosyltransferase family 2 protein,assign_new_DB_group,0
+group_75,DB_group_330,DB_group_330,Glycosyltransferase family 61 protein,assign_new_DB_group,0
+group_76,DB_group_331,DB_group_331,hypothetical protein,assign_new_DB_group,0
+group_77,DB_group_332,DB_group_332,hypothetical protein,assign_new_DB_group,0
+group_78,DB_group_333,DB_group_333,Glycosyltransferase family 2 protein,assign_new_DB_group,0
+group_79,DB_group_334,DB_group_334,hypothetical protein,assign_new_DB_group,0
+group_80,DB_group_335,DB_group_335,hypothetical protein,assign_new_DB_group,0
+group_81,DB_group_336,DB_group_336,Glycosyltransferase,assign_new_DB_group,0
+group_82,DB_group_337,DB_group_337,hypothetical protein,assign_new_DB_group,0
+group_83,DB_group_338,DB_group_338,hypothetical protein,assign_new_DB_group,0
+group_84,group_1,ugd,UDP-glucose 6-dehydrogenase,restore_exact_historical_cluster,1
+group_85,DB_group_339,DB_group_339,hypothetical protein,assign_new_DB_group,0
+group_86,DB_group_340,DB_group_340,hypothetical protein,assign_new_DB_group,0
+group_87,DB_group_341,DB_group_341,hypothetical protein,assign_new_DB_group,0
+group_88,DB_group_342,DB_group_342,Glycosyltransferase,assign_new_DB_group,0
+group_89,DB_group_343,DB_group_343,Asparagine synthetase domain-containing protein,assign_new_DB_group,0
+group_90,DB_group_344,DB_group_344,3-dehydroquinate dehydratase,assign_new_DB_group,0
+group_91,DB_group_345,DB_group_345,Glycosyltransferase,assign_new_DB_group,0
+DB_group_1,DB_group_1,DB_group_1,CDP-glycerol glycerophosphotransferase family protein,restore_exact_historical_cluster,1
+DB_group_10,DB_group_10,DB_group_10,alpha-28-polysialyltransferase family protein,restore_exact_historical_cluster,1
+DB_group_101,DB_group_101,DB_group_101,putative-Capsule-biosynthesis-protein,restore_exact_historical_cluster,1
+DB_group_102,DB_group_102,DB_group_102,Capsule polysaccharide biosynthesis protein,restore_exact_historical_cluster,1
+DB_group_105,DB_group_105,DB_group_105,Capsular biosynthesis protein,restore_exact_historical_cluster,1
+DB_group_106,DB_group_106,DB_group_106,Glycosyl transferase family 2,restore_exact_historical_cluster,1
+DB_group_108,DB_group_108,DB_group_108,glycosyltransferase,restore_exact_historical_cluster,1
+DB_group_11,DB_group_11,DB_group_11,HAD-IA family hydrolase,restore_exact_historical_cluster,1
+DB_group_110,DB_group_110,DB_group_110,bifunctional-Ribulose-5-phosphate-reductase/CDP-ribitol-pyrophosphorylase,restore_exact_historical_cluster,1
+DB_group_115,DB_group_115,DB_group_115,glycosyltransferase family 2 protein,restore_exact_historical_cluster,1
+DB_group_116,DB_group_116,DB_group_116,alpha/beta hydrolase,restore_exact_historical_cluster,1
+DB_group_117,DB_group_117,DB_group_117,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_119,DB_group_119,DB_group_119,glycosyltransferase family 2 protein,restore_exact_historical_cluster,1
+DB_group_12,DB_group_12,DB_group_12,Glycosyltransferase,restore_exact_historical_cluster,1
+DB_group_121,DB_group_121,DB_group_121,Tetratricopeptide repeat protein,restore_exact_historical_cluster,1
+DB_group_123,DB_group_123,DB_group_123,accessory Sec system protein Asp2,restore_exact_historical_cluster,1
+DB_group_127,DB_group_127,DB_group_127,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_129,DB_group_129,DB_group_129,Stealth protein CR2 conserved region 2 domain-containing protein,restore_exact_historical_cluster,1
+DB_group_13,DB_group_13,DB_group_13,Polysaccharide pyruvyl transferase domain-containing protein,restore_exact_historical_cluster,1
+DB_group_130,DB_group_130,DB_group_130,Glycosyltransferase family 61 protein,restore_exact_historical_cluster,1
+DB_group_131,DB_group_131,DB_group_131,Glycosyltransferase family 1 protein,restore_exact_historical_cluster,1
+DB_group_132,DB_group_132,DB_group_132,Glycosyltransferase family 4 protein,restore_exact_historical_cluster,1
+DB_group_133,DB_group_133,DB_group_133,glycosyltransferase family 2 protein,restore_exact_historical_cluster,1
+DB_group_135,DB_group_135,DB_group_135,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_139,DB_group_139,DB_group_139,Glycosyltransferase,restore_exact_historical_cluster,1
+DB_group_14,DB_group_14,DB_group_14,Glycosyltransferase,restore_exact_historical_cluster,1
+DB_group_140,DB_group_140,DB_group_140,Alpha/beta hydrolase,restore_exact_historical_cluster,1
+DB_group_141,DB_group_141,DB_group_141,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_142,DB_group_142,DB_group_142,Glycosyltransferase,restore_exact_historical_cluster,1
+DB_group_145,DB_group_145,DB_group_145,Glycosyltransferase family 1 protein,restore_exact_historical_cluster,1
+DB_group_146,DB_group_146,DB_group_146,Alpha/beta hydrolase,restore_exact_historical_cluster,1
+DB_group_148,DB_group_148,DB_group_148,Glycosyl transferase family 8,restore_exact_historical_cluster,1
+DB_group_149,DB_group_149,DB_group_149,Glycosyltransferase family 4 protein,restore_exact_historical_cluster,1
+DB_group_15,DB_group_15,DB_group_15,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_150,DB_group_150,DB_group_150,CatB-related O-acetyltransferase,restore_exact_historical_cluster,1
+DB_group_151,DB_group_151,DB_group_151,acyltransferase,restore_exact_historical_cluster,1
+DB_group_154,DB_group_154,DB_group_154,Glycosyltransferase family 2 protein,restore_exact_historical_cluster,1
+DB_group_155,DB_group_155,DB_group_155,CatB-related O-acetyltransferase,restore_exact_historical_cluster,1
+DB_group_156,DB_group_156,DB_group_156,SGNH/GDSL hydrolase family protein,restore_exact_historical_cluster,1
+DB_group_157,DB_group_157,DB_group_157,Capsular biosynthesis protein,restore_exact_historical_cluster,1
+DB_group_158,DB_group_158,DB_group_158,DUF6270 domain-containing protein,restore_exact_historical_cluster,1
+DB_group_160,DB_group_160,DB_group_160,Glycosyltransferase family 2 protein,restore_exact_historical_cluster,1
+DB_group_161,DB_group_161,DB_group_161,inositol monophosphatase family protein,restore_exact_historical_cluster,1
+DB_group_162,DB_group_162,DB_group_162,acyltransferase,restore_exact_historical_cluster,1
+DB_group_163,DB_group_163,DB_group_163,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_164,DB_group_164,DB_group_164,capsular polysaccharide modification protein,restore_exact_historical_cluster,1
+DB_group_165,DB_group_165,DB_group_165,Acyltransferase,restore_exact_historical_cluster,1
+DB_group_167,DB_group_167,DB_group_167,acyltransferase,restore_exact_historical_cluster,1
+DB_group_169,DB_group_169,DB_group_169,Capsule O-acetyl transferase,restore_exact_historical_cluster,1
+DB_group_17,DB_group_17,DB_group_17,Capsule biosynthesis phosphatase,restore_exact_historical_cluster,1
+DB_group_170,DB_group_170,DB_group_170,DUF115 domain-containing protein,restore_exact_historical_cluster,1
+DB_group_173,DB_group_173,DB_group_173,Acyltransferase,restore_exact_historical_cluster,1
+DB_group_176,DB_group_176,DB_group_176,glycosyltransferase family 92 protein,restore_exact_historical_cluster,1
+DB_group_177,DB_group_177,DB_group_177,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_179,DB_group_179,DB_group_179,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_181,DB_group_181,DB_group_181,Glycosyltransferase family 2 protein,restore_exact_historical_cluster,1
+DB_group_184,DB_group_184,DB_group_184,Glycosyltransferase family 1 protein,restore_exact_historical_cluster,1
+DB_group_186,DB_group_186,DB_group_186,Glycosyltransferase,restore_exact_historical_cluster,1
+DB_group_187,DB_group_187,DB_group_187,Glycosyl transferase,restore_exact_historical_cluster,1
+DB_group_188,DB_group_188,DB_group_188,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_189,DB_group_189,DB_group_189,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_19,DB_group_19,DB_group_19,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_190,DB_group_190,DB_group_190,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_194,DB_group_194,DB_group_194,Arrestin-like N-terminal domain-containing protein,restore_exact_historical_cluster,1
+DB_group_195,DB_group_195,DB_group_195,DUF563 domain-containing protein,restore_exact_historical_cluster,1
+DB_group_196,DB_group_196,DB_group_196,ATP-grasp fold amidoligase family protein,restore_exact_historical_cluster,1
+DB_group_197,DB_group_197,DB_group_197,glycosyltransferase 61 family protein,restore_exact_historical_cluster,1
+DB_group_2,DB_group_2,DB_group_2,Teichoic acid glycerol-phosphate transferase,restore_exact_historical_cluster,1
+DB_group_200,DB_group_200,DB_group_200,Esterase,restore_exact_historical_cluster,1
+DB_group_204,DB_group_204,DB_group_204,DUF563 domain-containing protein,restore_exact_historical_cluster,1
+DB_group_206,DB_group_206,DB_group_206,class I SAM-dependent methyltransferase,restore_exact_historical_cluster,1
+DB_group_207,DB_group_207,DB_group_207,Family 2 glycosyl transferase,restore_exact_historical_cluster,1
+DB_group_208,DB_group_208,DB_group_208,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_209,DB_group_209,DB_group_209,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_21,DB_group_21,DB_group_21,Glycosyltransferase family 29 protein,restore_exact_historical_cluster,1
+DB_group_211,DB_group_211,DB_group_211,Glycosyl transferase group 2 family protein,restore_exact_historical_cluster,1
+DB_group_212,DB_group_212,DB_group_212,glycosyltransferase,restore_exact_historical_cluster,1
+DB_group_213,DB_group_213,DB_group_213,Glycosyltransferase family 1 protein,restore_exact_historical_cluster,1
+DB_group_214,DB_group_214,DB_group_214,glycosyltransferase family 2 protein,restore_exact_historical_cluster,1
+DB_group_216,DB_group_216,DB_group_216,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_217,DB_group_217,DB_group_217,glycosyltransferase,restore_exact_historical_cluster,1
+DB_group_218,DB_group_218,DB_group_218,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_219,DB_group_219,DB_group_219,glycosyltransferase family 2 protein,restore_exact_historical_cluster,1
+DB_group_220,DB_group_220,DB_group_220,glycosyltransferase 61 family protein,restore_exact_historical_cluster,1
+DB_group_222,DB_group_222,DB_group_222,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_223,DB_group_223,DB_group_223,DUF115 domain-containing protein,restore_exact_historical_cluster,1
+DB_group_225_226,DB_group_225_226,DB_group_225_226,Sugar transporter,retain_approved_composite_cluster,2
+DB_group_229,DB_group_229,DB_group_229,galactosyltransferase-related protein,restore_exact_historical_cluster,1
+DB_group_23,DB_group_23,DB_group_23,Beta-3-deoxy-D-manno-oct-2-ulosonic acid transferase,restore_exact_historical_cluster,1
+DB_group_230,DB_group_230,DB_group_230,Glycosyltransferase 2-like domain-containing protein,restore_exact_historical_cluster,1
+DB_group_231,DB_group_231,DB_group_231,Glycosyltransferase,restore_exact_historical_cluster,1
+DB_group_232,DB_group_232,DB_group_232,Glycosyltransferase family 2 protein,restore_exact_historical_cluster,1
+DB_group_233,DB_group_233,DB_group_233,glycosyltransferase family 61 protein,restore_exact_historical_cluster,1
+DB_group_237,DB_group_237,DB_group_237,glycosyltransferase,restore_exact_historical_cluster,1
+DB_group_238,DB_group_238,DB_group_238,Glycosyltransferase,restore_exact_historical_cluster,1
+DB_group_24,DB_group_24,DB_group_24,Capsule polysaccharide biosynthesis protein,restore_exact_historical_cluster,1
+DB_group_241,DB_group_241,DB_group_241,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_247,DB_group_247,DB_group_247,acyltransferase,restore_exact_historical_cluster,1
+DB_group_253,DB_group_253,DB_group_253,Pectate lyase superfamily protein domain-containing protein,restore_exact_historical_cluster,1
+DB_group_256,DB_group_256,DB_group_256,HAD hydrolase-like protein,restore_exact_historical_cluster,1
+DB_group_26,DB_group_26,DB_group_26,Glycosyltransferase,restore_exact_historical_cluster,1
+DB_group_29,DB_group_29,DB_group_29,Rhamnan synthesis F family protein,restore_exact_historical_cluster,1
+DB_group_30,DB_group_30,DB_group_30,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_31,DB_group_31,DB_group_31,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_32,DB_group_32,DB_group_32,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_33,DB_group_33,DB_group_33,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_35,DB_group_35,DB_group_35,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_36,DB_group_36,DB_group_36,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_38,DB_group_38,DB_group_38,ABC transporter transmembrane region,restore_exact_historical_cluster,1
+DB_group_43,DB_group_43,DB_group_43,CDP-Glycerol:Poly(glycerophosphate) glycerophosphotransferase,restore_exact_historical_cluster,1
+DB_group_44,DB_group_44,DB_group_44,Capsular polysaccharide biosynthesis protein,restore_exact_historical_cluster,1
+DB_group_45,DB_group_45,DB_group_45,glycosyltransferase,restore_exact_historical_cluster,1
+DB_group_47,DB_group_47,DB_group_47,putative-capsular-polysaccharide,restore_exact_historical_cluster,1
+DB_group_49,DB_group_49,DB_group_49,Glycosyltransferase family 2 protein,restore_exact_historical_cluster,1
+DB_group_5,DB_group_5,DB_group_5,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_50,DB_group_50,DB_group_50,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_51,DB_group_51,DB_group_51,Hydrolase-(HAD-superfamily)-like-protein,restore_exact_historical_cluster,1
+DB_group_52,DB_group_52,DB_group_52,Glycosyl transferase family 1 domain-containing protein,restore_exact_historical_cluster,1
+DB_group_53,DB_group_53,DB_group_53,Glycosyltransferase,restore_exact_historical_cluster,1
+DB_group_56,DB_group_56,DB_group_56,CDP-glycerol glycerophosphotransferase family protein,restore_exact_historical_cluster,1
+DB_group_57,DB_group_57,DB_group_57,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_6,DB_group_6,DB_group_6,HAD-IA family hydrolase,restore_exact_historical_cluster,1
+DB_group_60,DB_group_60,DB_group_60,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_62,DB_group_62,DB_group_62,Beta-Kdo transferase,restore_exact_historical_cluster,1
+DB_group_63,DB_group_63,DB_group_63,Putative capsule O-acetyl transferase,restore_exact_historical_cluster,1
+DB_group_64,DB_group_64,DB_group_64,Capsular biosynthesis protein,restore_exact_historical_cluster,1
+DB_group_65,DB_group_65,DB_group_65,N-acetylneuraminate synthase family protein,restore_exact_historical_cluster,1
+DB_group_66,DB_group_66,DB_group_66,glycosyltransferase family 1 protein,restore_exact_historical_cluster,1
+DB_group_7,DB_group_7,DB_group_7,HAD-IA family hydrolase,restore_exact_historical_cluster,1
+DB_group_70,DB_group_70,DB_group_70,Glycosyl transferase 2 family protein,restore_exact_historical_cluster,1
+DB_group_71,DB_group_71,DB_group_71,class I SAM-dependent methyltransferase,restore_exact_historical_cluster,1
+DB_group_74,DB_group_74,DB_group_74,CatB-related O-acetyltransferase,restore_exact_historical_cluster,1
+DB_group_75,DB_group_75,DB_group_75,capsule-O-acetyl-transferase,restore_exact_historical_cluster,1
+DB_group_79,DB_group_79,DB_group_79,CatB-related O-acetyltransferase,restore_exact_historical_cluster,1
+DB_group_8,DB_group_8,DB_group_8,Hydrolase,restore_exact_historical_cluster,1
+DB_group_80,DB_group_80,DB_group_80,Hydrolase-(HAD-superfamily)-like-protein,restore_exact_historical_cluster,1
+DB_group_82,DB_group_82,DB_group_82,glycosyltransferase family 2 protein,restore_exact_historical_cluster,1
+DB_group_84,DB_group_84,DB_group_84,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_86,DB_group_86,DB_group_86,hypothetical protein,restore_exact_historical_cluster,1
+DB_group_89,DB_group_89,DB_group_89,Capsular polysaccharide modification protein,restore_exact_historical_cluster,1
+DB_group_9,DB_group_9,DB_group_9,HAD-IA family hydrolase,restore_exact_historical_cluster,1
+DB_group_90,DB_group_90,DB_group_90,Capsule polysaccharide biosynthesis protein,restore_exact_historical_cluster,1
+DB_group_91,DB_group_91,DB_group_91,Glycosyl transferase family 2 protein,restore_exact_historical_cluster,1
+DB_group_92,DB_group_92,DB_group_92,glycosyltransferase family 29 protein,restore_exact_historical_cluster,1
+DB_group_94,DB_group_94,DB_group_94,Arrestin-like N-terminal domain-containing protein,restore_exact_historical_cluster,1
+DB_group_96,DB_group_96,DB_group_96,Glycosyl transferase 2 family protein,restore_exact_historical_cluster,1
+DB_group_97,DB_group_97,DB_group_97,Glycosyltransferase 2-like prokaryotic type domain-containing protein,restore_exact_historical_cluster,1
+DB_group_98,DB_group_98,DB_group_98,Periplasmic endochitinase,restore_exact_historical_cluster,1
+DB_group_98_wckE_2,DB_group_98_wckE_2,DB_group_98_wckE_2,Putative glycosyltransferase,retain_approved_composite_cluster,2
+K1110,K1110,K11-10,Capsular biosynthesis protein,restore_exact_historical_cluster,1
+K9605,K9605,K96-05,Chromosome segregation protein SMC,restore_exact_historical_cluster,1
+K9607,K9607,K96-07,AlgX/AlgJ SGNH hydrolase-like domain-containing protein,restore_exact_historical_cluster,1
+K9609,K9609,K96-09,glycosyltransferase-family-2-protein,restore_exact_historical_cluster,1
+bcbE,bcbE,bcbE,Capsular biosynthesis protein,restore_exact_historical_cluster,1
+capA,capA,capA,putative-capsular-polysaccharide-modification-protein,restore_exact_historical_cluster,1
+capC,capC,capC,Capsule biosynthesis protein CapC,restore_exact_historical_cluster,1
+cps2A,cps2A,cps2A,Glycerophosphotransferase,restore_exact_historical_cluster,1
+cps2A_2,cps2A_2,cps2A_2,Cps2A,restore_exact_historical_cluster,1
+cpsB,cpsB,cpsB,mannose-1-phosphate guanylyltransferase/mannose-6-phosphate isomerase,restore_exact_historical_cluster,1
+ecbF,ecbF,ecbF,Capsule biosynthesis phosphatase,restore_exact_historical_cluster,1
+galE,galE,galE,UDP-glucose 4-epimerase GalE,restore_exact_historical_cluster,1
+galE_2,galE_2,galE_2,UDP-glucose 4-epimerase GalE,restore_exact_historical_cluster,1
+galU,galU,galU,UTP--glucose-1-phosphate uridylyltransferase,restore_exact_historical_cluster,1
+glf,glf,glf,UDP-galactopyranose mutase,restore_exact_historical_cluster,1
+glf_2,glf_2,glf_2,UDP-galactopyranose mutase,restore_exact_historical_cluster,1
+kdsA,kdsA,kdsA,3-deoxy-8-phosphooctulonate synthase,restore_exact_historical_cluster,1
+kdsB,kdsB,kdsB,3-deoxy-manno-octulosonate cytidylyltransferase,restore_exact_historical_cluster,1
+kfiA,kfiA,kfiA,N-acetylglucosaminyl-transferase,restore_exact_historical_cluster,1
+kfiB,kfiB,kfiB,KfiB-protein,restore_exact_historical_cluster,1
+kfiB_2,kfiB_2,kfiB_2,KfiB-protein,restore_exact_historical_cluster,1
+kfiB_3,kfiB_3,kfiB_3,KfiB-protein,restore_exact_historical_cluster,1
+kfiB_4,kfiB_4,kfiB_4,KfiB-protein,restore_exact_historical_cluster,1
+kfiB_5,kfiB_5,kfiB_5,Sulfotransferase family protein,restore_exact_historical_cluster,1
+kfiB_6,kfiB_6,kfiB_6,sulfotransferase family protein,restore_exact_historical_cluster,1
+kfiC,kfiC,kfiC,Glycosyltransferase family 2 protein,restore_exact_historical_cluster,1
+kfiD,kfiD,kfiD,UDP-glucose 6-dehydrogenase,restore_exact_historical_cluster,1
+kfoA,kfoA,kfoA,UDP-glucose/galactose-4-epimerase,restore_exact_historical_cluster,1
+kfoB,kfoB,kfoB,KfiB protein,restore_exact_historical_cluster,1
+kfoC,kfoC,kfoC,Acetylgalactosaminyl-proteoglycan 3-beta-glucuronosyltransferase,restore_exact_historical_cluster,1
+kfoC_2,kfoC_2,kfoC_2,glycosyltransferase,restore_exact_historical_cluster,1
+kfoD,kfoD,kfoD,Uncharacterized protein kfoD,restore_exact_historical_cluster,1
+kfoE,kfoE,kfoE,capsular-polysaccharide,restore_exact_historical_cluster,1
+kpsC,kpsC,kpsC,Capsule polysaccharide export protein KpsC,restore_exact_historical_cluster,1
+kpsC_2,kpsC_2,kpsC_2,Capsular polysaccharide biosynthesis protein,restore_exact_historical_cluster,1
+kpsC_3,kpsC_3,kpsC_3,KpsC protein,restore_exact_historical_cluster,1
+kpsC_4,kpsC_4,kpsC_4,Capsule polysaccharide biosynthesis protein,restore_exact_historical_cluster,1
+kpsC_5,kpsC_5,kpsC_5,capsule-export-protein-KpsC,restore_exact_historical_cluster,1
+kpsC_6_7,kpsC_6_7,kpsC_6_7,Capsule polysaccharide biosynthesis/export protein KpsC,retain_approved_composite_cluster,2
+kpsD,kpsD,kpsD,Polysialic acid transport protein,restore_exact_historical_cluster,1
+kpsD_2,kpsD_2,kpsD_2,KpsD,restore_exact_historical_cluster,1
+kpsD_4,kpsD_4,kpsD_4,Periplasmic protein Wza involved in polysaccharide export contains SLBB domain of the beta-grasp fold,restore_exact_historical_cluster,1
+kpsD_5,kpsD_5,kpsD_5,Periplasmic protein Wza involved in polysaccharide export contains SLBB domain of the beta-grasp fold,restore_exact_historical_cluster,1
+kpsE,kpsE,kpsE,Capsule polysaccharide export inner-membrane protein,restore_exact_historical_cluster,1
+kpsE_2,kpsE_2,kpsE_2,Capsule-polysaccharide-export-inner-membranex-protein,restore_exact_historical_cluster,1
+kpsE_4,kpsE_4,kpsE_4,Capsule polysaccharide export inner-membrane protein,restore_exact_historical_cluster,1
+kpsF,kpsF,kpsF,Polysialic acid capsule expression protein,restore_exact_historical_cluster,1
+kpsF_3,kpsF_3,kpsF_3,KpsF/GutQ family sugar-phosphate isomerase,restore_exact_historical_cluster,1
+kpsM,kpsM,kpsM,polysialic-acid-transport-protein-KpsM,restore_exact_historical_cluster,1
+kpsM_2,kpsM_2,kpsM_2,polysialic-acid-transport-protein-KpsM,restore_exact_historical_cluster,1
+kpsM_3,kpsM_3,kpsM_3,ABC transporter permease,restore_exact_historical_cluster,1
+kpsM_4,kpsM_4,kpsM_4,Transport permease protein,restore_exact_historical_cluster,1
+kpsM_5_6,kpsM_5_6,kpsM_5_6,Capsule polysaccharide transport system permease protein KpsM,retain_approved_composite_cluster,2
+kpsM_7,kpsM_7,kpsM_7,Transport permease protein,restore_exact_historical_cluster,1
+kpsM_8,kpsM_8,kpsM_8,polysialic-acid-transport-protein-KpsM,restore_exact_historical_cluster,1
+kpsS,kpsS,kpsS,kpsS-protein,restore_exact_historical_cluster,1
+kpsS_2,kpsS_2,kpsS_2,Capsule polysaccharide export protein,restore_exact_historical_cluster,1
+kpsS_4,kpsS_4,kpsS_4,KpsS protein,restore_exact_historical_cluster,1
+kpsS_5,kpsS_5,kpsS_5,Capsule polysaccharide modification protein KpsS,restore_exact_historical_cluster,1
+kpsS_6,kpsS_6,kpsS_6,Capsule polysaccharide modification protein KpsS,restore_exact_historical_cluster,1
+kpsS_7,kpsS_7,kpsS_7,Capsule polysaccharide modification protein KpsS,restore_exact_historical_cluster,1
+kpsT,kpsT,kpsT,Polysialic acid transport ATP-binding protein KpsT,restore_exact_historical_cluster,1
+kpsT_2,kpsT_2,kpsT_2,ABC transporter ATP-binding protein,restore_exact_historical_cluster,1
+kpsT_3,kpsT_3,kpsT_3,KpsT protein,restore_exact_historical_cluster,1
+kpsT_4_5,kpsT_4_5,kpsT_4_5,Capsule polysaccharide transport system ATP-binding protein KpsT,retain_approved_composite_cluster,2
+kpsT_6,kpsT_6,kpsT_6,ABC transporter ATP-binding protein,restore_exact_historical_cluster,1
+kpsT_7,kpsT_7,kpsT_7,ABC-type polysaccharide/polyol phosphate transport system ATPase component,restore_exact_historical_cluster,1
+kpsU,kpsU,kpsU,3-deoxy-manno-octulosonate cytidylyltransferase,restore_exact_historical_cluster,1
+kslA,kslA,kslA,glycerol-3-phosphate-cytidyltransferase,restore_exact_historical_cluster,1
+kslB,kslB,kslB,lipopolysaccharide-assembly-protein,restore_exact_historical_cluster,1
+kslC,kslC,kslC,CDP-glycerol-glycerophosphotransferase-family-protein,restore_exact_historical_cluster,1
+kslD,kslD,kslD,XcbB/CpsF family capsular polysaccharide biosynthesis protein,restore_exact_historical_cluster,1
+kslE,kslE,kslE,6-bladed beta-propeller,restore_exact_historical_cluster,1
+neuA,neuA,neuA,N-acylneuraminate cytidylyltransferase,restore_exact_historical_cluster,1
+neuB,neuB,neuB,N-acylneuraminate-9-phosphate synthase,restore_exact_historical_cluster,1
+neuC,neuC,neuC,UDP-N-acetylglucosamine 2-epimerase,restore_exact_historical_cluster,1
+neuD,neuD,neuD,sialic-acid-synthase,restore_exact_historical_cluster,1
+neuE,neuE,neuE,polysialic acid biosynthesis protein,restore_exact_historical_cluster,1
+neuS,neuS,neuS,Glycosyl transferase,restore_exact_historical_cluster,1
+rffD,rffD,rffD,UDP-N-acetyl-D-mannosamine dehydrogenase,restore_exact_historical_cluster,1
+rffD_2,rffD_2,rffD_2,UDP-N-acetyl-D-mannosamine dehydrogenase,restore_exact_historical_cluster,1
+rffE_2,rffE_2,rffE_2,UDP-N-acetylglucosamine-2-epimerase,restore_exact_historical_cluster,1
+rffE_4,rffE_4,rffE_4,UDP-N-acetylglucosamine 2-epimerase (non-hydrolyzing),restore_exact_historical_cluster,1
+rmlA,rmlA,rmlA,glucose-1-phosphate thymidylyltransferase RfbA,restore_exact_historical_cluster,1
+rmlA_2,rmlA_2,rmlA_2,glucose-1-phosphate thymidylyltransferase RfbA,restore_exact_historical_cluster,1
+rmlB,rmlB,rmlB,dTDP-glucose 46-dehydratase,restore_exact_historical_cluster,1
+rmlB_2,rmlB_2,rmlB_2,dTDP-glucose 46-dehydratase,restore_exact_historical_cluster,1
+rmlC,rmlC,rmlC,dTDP-4-dehydrorhamnose 35-epimerase,restore_exact_historical_cluster,1
+rmlC_2,rmlC_2,rmlC_2,dTDP-4-dehydrorhamnose 35-epimerase,restore_exact_historical_cluster,1
+rmlD,rmlD,rmlD,dTDP-4-dehydrorhamnose reductase,restore_exact_historical_cluster,1
+rmlD_2,rmlD_2,rmlD_2,dTDP-4-dehydrorhamnose reductase,restore_exact_historical_cluster,1
+tarQ,tarQ,tarQ,Glycosyl transferase family 2,restore_exact_historical_cluster,1
+ugd,ugd,ugd,UDP-glucose 6-dehydrogenase,restore_exact_historical_cluster,1
+ugd_2,ugd_2,ugd_2,UDP-glucose 6-dehydrogenase,restore_exact_historical_cluster,1
+ugd_kfiD_3,ugd_kfiD_3,ugd_kfiD_3,UDP-glucose 6-dehydrogenase,restore_exact_historical_cluster,1
+vatD,vatD,vatD,Antibiotic acetyltransferase,restore_exact_historical_cluster,1
+vatD_2,vatD_2,vatD_2,CatB-related O-acetyltransferase,restore_exact_historical_cluster,1
+vatD_3,vatD_3,vatD_3,Streptogramin A acetyltransferase,restore_exact_historical_cluster,1
+vioA,vioA,vioA,DegT/DnrJ/EryC1/StrS family aminotransferase,restore_exact_historical_cluster,1
+vioB,vioB,vioB,acetyltransferase,restore_exact_historical_cluster,1
+vipB,vipB,vipB,NAD-dependent epimerase/dehydratase family protein,restore_exact_historical_cluster,1
+waaV,waaV,waaV,Beta13-glucosyltransferase WaaV,restore_exact_historical_cluster,1
+wavE,wavE,wavE,WavE lipopolysaccharide synthesis,restore_exact_historical_cluster,1
+wcaA,wcaA,wcaA,N-acetylgalactosaminyl-diphosphoundecaprenol glucuronosyltransferase,restore_exact_historical_cluster,1
+wcaA_2,wcaA_2,wcaA_2,Glycosyl transferase group 2 family protein,restore_exact_historical_cluster,1
+wcaK,wcaK,wcaK,Polysaccharide pyruvyl transferase,restore_exact_historical_cluster,1
+wckA,wckA,wckA,Putative glycosyl transferase,restore_exact_historical_cluster,1
+wckB,wckB,wckB,Putative glycosyl transferase,restore_exact_historical_cluster,1
+wckC,wckC,wckC,glycosyltransferase-family-2-protein,restore_exact_historical_cluster,1
+wckE,wckE,wckE,Glycosyltransferase GT2 family,restore_exact_historical_cluster,1
+wckF,wckF,wckF,Glycosyltransferase family 1 protein,restore_exact_historical_cluster,1
+wejS,wejS,wejS,Capsular biosynthesis protein,restore_exact_historical_cluster,1
+wza,kpsD_3,kpsD_3,Capsule polysaccharide export outer-membrane protein KpsD,restore_exact_historical_cluster,1
+ybl127,ybl127,ybl127,ybl127,restore_exact_historical_cluster,1
+ybl128,ybl128,ybl128,ybl128,restore_exact_historical_cluster,1
+ybl128_2,ybl128_2,ybl128_2,CDP-glycerol glycerophosphotransferase,restore_exact_historical_cluster,1
+ybl128_3,ybl128_3,ybl128_3,CDP-glycerol glycerophosphotransferase,restore_exact_historical_cluster,1
+ybl128_4,ybl128_4,ybl128_4,CDP-glycerol glycerophosphotransferase,restore_exact_historical_cluster,1
+ybl130,ybl130,ybl130,CDP-glycerol:poly(Glycerophosphate) glycerophosphotransferase,restore_exact_historical_cluster,1
+ybl130_2,ybl130_2,ybl130_2,ybl130,restore_exact_historical_cluster,1
+ybl130_3,ybl130_3,ybl130_3,CDP-glycerol--glycerophosphate glycerophosphotransferase,restore_exact_historical_cluster,1
+ybl130_4,ybl130_4,ybl130_4,CDP-glycerol--glycerophosphate glycerophosphotransferase,restore_exact_historical_cluster,1

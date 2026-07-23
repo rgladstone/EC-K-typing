@@ -1,0 +1,15 @@
+.DS_Store
+._*
+__pycache__/
+*.pyc
+
+panaroo_add_novel*/
+new_DB/
+podman_tmp/
+*.sif
+
+panaroo_*.out
+panaroo_*.err
+generate_gffs_*.out
+generate_gffs_*.err
+private_builder_build_*.out

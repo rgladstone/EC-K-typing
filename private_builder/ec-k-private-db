@@ -1,0 +1,178 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+image="${EC_K_PRIVATE_BUILDER_IMAGE:-ec-k-typing-private-builder:4.0.0}"
+runtime="${EC_K_CONTAINER_RUNTIME:-}"
+platform="${EC_K_CONTAINER_PLATFORM:-linux/amd64}"
+input_gff=""
+output_dir=""
+arguments=()
+
+usage() {
+    cat <<'EOF'
+Usage:
+  ec-k-private-db \
+    --input-gff LOCUS.gff \
+    --output-dir OUTPUT \
+    --group 2|3 \
+    --locus KL9001 \
+    --accession PRIVATE \
+    [--phenotype TEXT] \
+    [--note TEXT] \
+    [--threads N] \
+    [--allow-atypical-boundaries] \
+    [--keep-work]
+
+Wrapper options:
+  --image IMAGE       Container image or Apptainer .sif path.
+  --runtime COMMAND   docker, podman, apptainer, or singularity.
+  --platform VALUE    OCI platform (default: linux/amd64).
+  -h, --help          Show this help.
+
+The input GFF is mounted read-only. The container has no network access when
+run with Docker or Podman. Only OUTPUT is written.
+EOF
+}
+
+while (($#)); do
+    case "$1" in
+        --input-gff)
+            input_gff="${2:?--input-gff requires a path}"
+            shift 2
+            ;;
+        --output-dir)
+            output_dir="${2:?--output-dir requires a path}"
+            shift 2
+            ;;
+        --image)
+            image="${2:?--image requires a value}"
+            shift 2
+            ;;
+        --runtime)
+            runtime="${2:?--runtime requires a value}"
+            shift 2
+            ;;
+        --platform)
+            platform="${2:?--platform requires a value}"
+            shift 2
+            ;;
+        -h|--help)
+            usage
+            exit 0
+            ;;
+        *)
+            arguments+=("$1")
+            shift
+            ;;
+    esac
+done
+
+if [[ -z "$input_gff" || -z "$output_dir" ]]; then
+    usage >&2
+    exit 2
+fi
+
+if [[ ! -f "$input_gff" ]]; then
+    echo "Input GFF does not exist: $input_gff" >&2
+    exit 2
+fi
+
+if [[ -e "$output_dir" ]]; then
+    echo "Refusing to overwrite existing output: $output_dir" >&2
+    exit 2
+fi
+
+if [[ -z "$runtime" ]]; then
+    for candidate in docker podman apptainer singularity; do
+        if command -v "$candidate" >/dev/null 2>&1; then
+            runtime="$candidate"
+            break
+        fi
+    done
+fi
+
+if [[ -z "$runtime" ]] || ! command -v "$runtime" >/dev/null 2>&1; then
+    echo "No supported container runtime found." >&2
+    echo "Install Docker, Podman, Apptainer, or Singularity." >&2
+    exit 2
+fi
+
+python_command=""
+for candidate in python3 python; do
+    if command -v "$candidate" >/dev/null 2>&1; then
+        python_command="$candidate"
+        break
+    fi
+done
+if [[ -z "$python_command" ]]; then
+    echo "Python is required to resolve input and output paths." >&2
+    exit 2
+fi
+
+input_absolute=$(
+    "$python_command" -c \
+        'import pathlib,sys; print(pathlib.Path(sys.argv[1]).resolve())' \
+        "$input_gff"
+)
+output_absolute=$(
+    "$python_command" -c \
+        'import pathlib,sys; print(pathlib.Path(sys.argv[1]).resolve())' \
+        "$output_dir"
+)
+output_parent=$(dirname "$output_absolute")
+output_name=$(basename "$output_absolute")
+
+if [[ ! -d "$output_parent" ]]; then
+    echo "Output parent directory does not exist: $output_parent" >&2
+    exit 2
+fi
+
+container_arguments=(
+    --input-gff /private-input/input.gff
+    --output-dir "/private-output/$output_name"
+    "${arguments[@]}"
+)
+
+case "$runtime" in
+    docker)
+        exec "$runtime" run --rm \
+            --platform "$platform" \
+            --network none \
+            --read-only \
+            --tmpfs /tmp:rw,nosuid,nodev,size=2g \
+            --env HOME=/tmp \
+            --user "$(id -u):$(id -g)" \
+            --mount "type=bind,src=$input_absolute,dst=/private-input/input.gff,readonly" \
+            --mount "type=bind,src=$output_parent,dst=/private-output" \
+            "$image" \
+            "${container_arguments[@]}"
+        ;;
+    podman)
+        exec "$runtime" run --rm \
+            --platform "$platform" \
+            --network none \
+            --read-only \
+            --tmpfs /tmp:rw,nosuid,nodev,size=2g \
+            --env HOME=/tmp \
+            --mount "type=bind,src=$input_absolute,dst=/private-input/input.gff,readonly" \
+            --mount "type=bind,src=$output_parent,dst=/private-output" \
+            "$image" \
+            "${container_arguments[@]}"
+        ;;
+    apptainer|singularity)
+        exec "$runtime" exec \
+            --cleanenv \
+            --containall \
+            --bind "$input_absolute:/private-input/input.gff:ro" \
+            --bind "$output_parent:/private-output" \
+            "$image" \
+            /opt/conda/envs/builder/bin/python \
+            /opt/ec-k-typing/private_builder/build_private_db.py \
+            "${container_arguments[@]}"
+        ;;
+    *)
+        echo "Unsupported runtime: $runtime" >&2
+        exit 2
+        ;;
+esac
