@@ -1,67 +1,181 @@
 <img align="right" src="https://github.com/klebgenomics/Kaptive/blob/master/docs/assets/logo.png?raw=true" alt="Kaptive" width="200">
 
-# _E. coli_ Group 2 and Group 3 capsular K-typing database
+# _E. coli_ group 2 and group 3 capsular K-typing database
 
 [![Streamlit App](https://img.shields.io/badge/Streamlit-%23FE4B4B.svg?logo=streamlit&logoColor=white)](https://kaptive-database-validator.streamlit.app/)
 [![Release Database](https://github.com/rgladstone/EC-K-typing/actions/workflows/release.yml/badge.svg)](https://github.com/rgladstone/EC-K-typing/actions/workflows/release.yml)
 [![DOI:10.1038/s41564-026-02283-w](https://zenodo.org/badge/DOI/10.1038/s41564-026-02283-w.svg)](https://doi.org/10.1038/s41564-026-02283-w)
 
-###	Database update summary V3
-KL nomenclature now reflects K-phenotype numbering with unknown phenotypes as KL110+. 
-For database v1 and v2 downloaded prior to 6/11/25, we recommend rerunning kaptive with the lastest version of the DB or using the lookup table provided in EC-K-typing/supplementary.
+## Database update summary: v4.0.0
 
-###	Information
-This database allows the _in-silico_ K-typing of _E. coli_ Group 2 and Group 3 (ABC-transporter dependent) K-loci with the tool Kaptive<sup>[1]</sup>.
+Database v4.0.0 expands the group 2 and group 3 reference set from 90 to
+109 K-locus records. It adds 16 sequence-defined loci, assigned the new
+EC-K-Typing identifiers KL176–KL191 following comparison with the kTYPr
+capsule catalogue. These loci do not currently have assigned K phenotypes.
+A crosswalk between the EC-K-Typing identifiers, kTYPr catalogue labels,
+and source genome accessions is provided in the
+[v4 locus provenance](DB/panaroo_refset/v4_locus_provenance.md). The update
+also adds three references with known phenotype associations: K18-K22
+(KL18), K94 (KL94), and K95 (KL95).
 
-This database includes K-loci with unique capsular gene presence-absence patterns (excluding IS elements). It is expected to cover the majority of invasive _E. coli_ isolates; group 2 and 3 capsule prevalence is near complete in phylogroups B2 and D, whilst phylogroups A, B1, and C have a lower prevalence. ~50,000 _E. coli_ genomes were screened from bloodstream infections (human), carriage (human and animal), from Europe, North America, Africa and Asia, and all G2 kpsF-positive and G3 kpsM-positive assemblies (90% kmerID) in a collection of 661k bacterial assemblies <sup>[2–12]</sup>.
+Three existing locus records have been renamed to match their established
+K phenotypes: the records previously designated KL124, KL110, and KL116
+are now designated KL6, KL51, and KL97, respectively. K74 is excluded
+because it is no longer recognised as a valid K serotype.
 
-Phenotypes, if known, are provided in the GenBank K-type fields. Most (20/26) group 2 phenotypes and all (6/6) group 3 phenotypes are represented by the database <sup>[13]</sup>.
+KL158 now has the descriptive type `Capsule null predicted`. When comparing
+results generated with a database version before v4.0.0, we recommend
+rerunning Kaptive with the current database or applying the nomenclature
+crosswalk above.
 
-Some capsules have the same gene presence-absence pattern and differ only in sequence; in these cases, multiple K-types are reported for a given K-locus. The genetic determinants need validation before they are included as phenotypic logic for Kaptive to distinguish.
+## About the database
 
-####	K96 and K54
-These capsular types share the same genes and are highly conserved. K54 has been reported to be a modified K96 polysaccharide where transfer of threonine and serine replaces some of the glucuronic acid. Such modifications are thought to be encoded outside of the kps <sup>[14, 15]</sup>
-####	K13 and K23
-These capsular types share the same genes and are highly conserved. They have previously been reported to belong to a serogroup along with K20<sup>[16]</sup> that has replaced one gene relative to K13 and K23.
-####	K1 and K92
-Despite having the same gene content, these two capsular types have divergent sequences, allowing them to be typed separately. Therefore, both reference loci are included in the database under KL1 (K1) and KL92 (K92). A divergent _neuS_ gene is known to be the genetic determinant<sup>[17]</sup>.
-####	Atypical K-loci
-These K-loci have an atypical locus architecture, with the capsular-specific region 2 genes outside of regions 1 and 3. If similar loci exist with additional novel region 2 genes after the end of the loci included in the DB, they will look typeable, but the extra region 2 genes may not be captured. We recommend additional inspection of atypical loci marked as atypical in the DB K-type field that will appear in the Kaptive output. Please refer to the Kaptive documentation for general advice on interpreting Kaptive outputs. Kaptive<sup>1</sup> version 3 https://kaptive.readthedocs.io/en/latest/
+This Kaptive database supports _in silico_ typing of _E. coli_ group 2 and
+group 3 capsular K loci, which use ABC transporter-dependent capsule
+assembly systems <sup>[1]</sup>.
 
-The K-loci genes were annotated using bakta 1.10.4 and panaroo 1.5.2 from https://github.com/oschwengers/bakta<sup>[18]</sup> and https://github.com/gtonkinhill/panaroo<sup>[19]</sup> to give consistent annotation across the DB. Non-capsular IS-element-associated annotations, but not sequence, have been removed.
+The reference set was developed by screening approximately 50,000
+_E. coli_ genomes from bloodstream infection, human and animal carriage,
+and collections spanning Europe, North America, Africa, and Asia. This was
+supplemented with group 2 `kpsF`-positive and group 3 `kpsM`-positive
+assemblies identified at 90% k-mer identity in a collection of 661,000
+bacterial assemblies <sup>[2–12]</sup>.
 
-#### Adding novel K-loci
-Please contact rebeccgl@uio.no or log an issue on this GitHub repository to have novel alleles added to the database. Alternatively, use the provided EC-K-typing/DB/panaroo_refset/gffs and panaroo-generate-gff to annotate your locus with the database gene cluster names and use the K-gff_to_gbk.py script to generate an in-house Kaptive database from the gffs.
+The database is expected to cover most group 2 and group 3 loci found among
+invasive _E. coli_. These capsule groups are especially prevalent in
+phylogroups B2 and D and occur less frequently in phylogroups A, B1, and C.
 
-###	How to use the database
-K-typing database is formatted for use with the tool Kaptive<sup>[1]</sup> version 3.0.0b5
+The database includes all currently recognised group 2 and group 3 K
+phenotypes with an established locus association: 33 K phenotypes
+represented by 30 locus records. Three phenotype pairs cannot currently
+be distinguished reliably from their K-locus sequences and are reported
+as composite types: K13-K23 (KL13), K18-K22 (KL18), and K96-K54 (KL96).
+KL158 additionally has the descriptive type `Capsule null predicted`.
 
-Quick start: kaptive assembly EC-K-typing_group2and3_v3.0.0.gbk your_assembly.fasta
+### Atypical loci and reference boundaries
 
-For more information, read https://kaptive.readthedocs.io/en/latest/
+Some K loci have atypical architectures in which capsule-specific genes
+occur outside the conserved export regions. A current list of loci
+classified as having atypical architecture is provided in the
+[atypical-locus metadata](DB/panaroo_refset/atypical_loci.csv).
 
-### Cite
-Gladstone, R. A. et al. Identification of transporter-dependent capsular loci associated with the invasive potential of _Escherichia coli_. 2026 Nature Microbiology. https://www.nature.com/articles/s41564-026-02283-w 
+A close Kaptive match may fail to capture additional capsule genes located
+beyond the reference boundaries. For these loci, inspect the assembly
+context and gene-level Kaptive results. See the
+[Kaptive documentation](https://kaptive.readthedocs.io/en/latest/) for
+general guidance on interpreting results.
 
-Stanton TD, Hetland MAK, Löhr IH, Holt KE, Wyres KL. Fast and accurate in silico antigen typing with Kaptive 3. Microb Genom 2025;11:001428.
+### Database construction
 
-#### References
-1.	Stanton TD, Hetland MAK, Löhr IH, Holt KE, Wyres KL. Fast and accurate in silico antigen typing with Kaptive 3. Microb Genom 2025;11:001428.
-2.	Gladstone RA, McNally A, Pöntinen AK, Tonkin-Hill G, Lees JA, et al. Emergence and dissemination of antimicrobial resistance in Escherichia coli causing bloodstream infections in Norway in 2002–17: a nationwide, longitudinal, microbial population genomic study. The Lancet Microbe 2021;2:e331–e341.
-3.	Arredondo-Alonso S, Pöntinen AK, Gama JA, Gladstone RA, Harms K, et al. Plasmid-driven strategies for clone success in Escherichia coli. Nat Commun 2025;16:2921.
-4.	Kallonen T, Brodrick HJ, Harris SR, Corander J, Brown NM, et al. Systematic longitudinal survey of invasive Escherichia coli in England demonstrates a stable population structure only transiently disturbed by the emergence of ST131. Genome Res. Epub ahead of print 18 July 2017. DOI: 10.1101/gr.216606.116.
-5.	Pöntinen AK, Gladstone RA, Pesonen H, Pesonen M, Cléon F, et al. Modulation of multidrug-resistant clone success in Escherichia coli populations: a longitudinal, multi-country, genomic and antibiotic usage cohort study. Lancet Microbe 2024;5:e142–e150.
-6.	Shao Y, Garcia-Mauriño C, Clare S, Dawson NJR, Mu A, et al. Primary succession of Bifidobacteria drives pathogen resistance in neonatal microbiota assembly. Nat Microbiol 2024;9:2570–2582.
-7.	Mäklin T, Thorpe HA, Pöntinen AK, Gladstone RA, Shao Y, et al. Strong pathogen competition in neonatal gut colonisation. Nat Commun 2022;13:7417.
-8.	Liu CM, Aziz M, Park DE, Wu Z, Stegger M, et al. Using source-associated mobile genetic elements to identify zoonotic extraintestinal E. coli infections. One Health 2023;16:100518.
-9.	Ludden C, Raven KE, Jamrozy D, Gouliouris T, Blane B, et al. One Health Genomic Surveillance of Escherichia coli Demonstrates Distinct Lineages and Mobile Genetic Elements in Isolates from Humans versus Livestock. MBio;10. Epub ahead of print 22 January 2019. DOI: 10.1128/mBio.02693-18.
-10.	Sands K, Carvalho MJ, Portal E, Thomson K, Dyer C, et al. Characterization of antimicrobial-resistant Gram-negative bacteria that cause neonatal sepsis in seven low- and middle-income countries. Nat Microbiol 2021;6:512–523.
-11.	Dicks J, Fazal M-A, Oliver K, Grayson NE, Turnbull JD, et al. NCTC3000: a century of bacterial strain collecting leads to a rich genomic data resource. Microb Genom 2023;9:mgen000976.
-12.	Blackwell GA, Hunt M, Malone KM, Lima L, Horesh G, et al. Exploring bacterial diversity via a curated and searchable snapshot of archived DNA sequences. PLoS Biol 2021;19:e3001421.
-13.	Kunduru BR, Nair SA, Rathinavelan T. EK3D: an E. coli K antigen 3-dimensional structure database. Nucleic Acids Res 2016;44:D675–81.
-14.	Jann B, Kochanowski H, Jann K. Structure of the capsular K96 polysaccharide (K96 antigen) from Escherichia coli O77:K96:H- and comparison with the capsular K54 polysaccharide (K54 antigen) from Escherichia coli O6:K54:H10. Carbohydr Res 1994;253:323–327.
-15.	Whitfield C. Biosynthesis and assembly of capsular polysaccharides in Escherichia coli. Annu Rev Biochem 2006;75:39–68.
-16.	Vann WF, Soderstrom T, Egan W, Tsui FP, Schneerson R, et al. Serological, chemical, and structural analyses of the Escherichia coli cross-reactive capsular polysaccharides K13, K20, and K23. Infect Immun 1983;39:623–629.
-17.	Roberts IS. The Expression of Polysaccharide Capsules in Escherichia coli. In: Glycomicrobiology. Boston: Kluwer Academic Publishers; 2005. pp. 441–464.
-18.	Schwengers O, Jelonek L, Dieckmann MA, Beyvers S, Blom J, et al. Bakta: rapid and standardized annotation of bacterial genomes via alignment-free sequence identification: Find out more about Bakta, the motivation, challenges and applications, here. Microb Genom 2021;7:000685.
-19.	Tonkin-Hill G, MacAlasdair N, Ruis C, Weimann A, Horesh G, et al. Producing polished prokaryotic pangenomes with the Panaroo pipeline. Genome Biol 2020;21:180.
+Reference genes were annotated using Bakta 1.10.x and reconciled using
+Panaroo 1.5.2. The final reference GFFs were generated using Panaroo 1.6.0
+<sup>[13,14]</sup>.
+
+Non-capsular IS-element-associated annotations and newly assigned
+hypothetical CDS annotations shorter than 200 bp were excluded from the
+final gene annotations. Their underlying nucleotide sequences were not
+removed from the locus references.
+
+The reproducible database-construction workflow and curated reference GFFs
+are provided in [`DB/panaroo_refset`](DB/panaroo_refset/).
+
+### Database additions and corrections
+
+To have a novel locus considered for inclusion in the public database,
+contact rebeccgl@uio.no or open an issue in this repository.
+
+Requests to add or correct a K-phenotype association for an existing locus
+are also welcome. Please provide the locus designation, proposed phenotype,
+reference strain or sequence accession where available, and the supporting
+serological, experimental, or published evidence. Phenotype associations
+will only be added when their provenance and relationship to the locus can
+be evaluated.
+
+For sequences that cannot yet be shared, the containerised
+[private database builder](private_builder/README.md) can add one local
+locus to a frozen copy of the public reference set and produce a validated
+private Kaptive database. The sequence is processed locally, the repository
+is not modified, and nothing is uploaded. Local identifiers of KL9000 or
+greater are deliberately kept separate from official EC-K-Typing locus
+assignments.
+
+## Using the database
+
+The database is formatted for Kaptive 3 and has been validated using
+Kaptive 3.1.0. After cloning the repository or downloading a release, run:
+
+```bash
+kaptive assembly EC-K-typing_group2and3.gbk your_assembly.fasta
+```
+
+See the [Kaptive documentation](https://kaptive.readthedocs.io/en/latest/)
+for installation, output interpretation, and additional options.
+
+## Citation
+
+If you use this database, please cite:
+
+Gladstone, R. A., Pesonen, M., Pöntinen, A. K. _et al._
+Identification of transporter-dependent capsular loci associated with the
+invasive potential of _Escherichia coli_. _Nature Microbiology_ **11**,
+1205–1216 (2026).
+https://doi.org/10.1038/s41564-026-02283-w
+
+If you use Kaptive, please also cite:
+
+Stanton, T. D., Hetland, M. A. K., Löhr, I. H., Holt, K. E. & Wyres, K. L.
+Fast and accurate in silico antigen typing with Kaptive 3.
+_Microbial Genomics_ **11**, 001428 (2025).
+https://doi.org/10.1099/mgen.0.001428
+
+## References
+
+1. Stanton TD, Hetland MAK, Löhr IH, Holt KE, Wyres KL. Fast and accurate
+   in silico antigen typing with Kaptive 3. _Microbial Genomics_.
+   2025;11:001428.
+2. Gladstone RA, McNally A, Pöntinen AK, Tonkin-Hill G, Lees JA, et al.
+   Emergence and dissemination of antimicrobial resistance in
+   _Escherichia coli_ causing bloodstream infections in Norway in 2002–17:
+   a nationwide, longitudinal, microbial population genomic study.
+   _The Lancet Microbe_. 2021;2:e331–e341.
+3. Arredondo-Alonso S, Pöntinen AK, Gama JA, Gladstone RA, Harms K, et al.
+   Plasmid-driven strategies for clone success in _Escherichia coli_.
+   _Nature Communications_. 2025;16:2921.
+4. Kallonen T, Brodrick HJ, Harris SR, Corander J, Brown NM, et al.
+   Systematic longitudinal survey of invasive _Escherichia coli_ in England
+   demonstrates a stable population structure only transiently disturbed
+   by the emergence of ST131. _Genome Research_. 2017;27:1437–1449.
+5. Pöntinen AK, Gladstone RA, Pesonen H, Pesonen M, Cléon F, et al.
+   Modulation of multidrug-resistant clone success in _Escherichia coli_
+   populations: a longitudinal, multi-country, genomic and antibiotic
+   usage cohort study. _The Lancet Microbe_. 2024;5:e142–e150.
+6. Shao Y, Garcia-Mauriño C, Clare S, Dawson NJR, Mu A, et al. Primary
+   succession of Bifidobacteria drives pathogen resistance in neonatal
+   microbiota assembly. _Nature Microbiology_. 2024;9:2570–2582.
+7. Mäklin T, Thorpe HA, Pöntinen AK, Gladstone RA, Shao Y, et al. Strong
+   pathogen competition in neonatal gut colonisation.
+   _Nature Communications_. 2022;13:7417.
+8. Liu CM, Aziz M, Park DE, Wu Z, Stegger M, et al. Using
+   source-associated mobile genetic elements to identify zoonotic
+   extraintestinal _E. coli_ infections. _One Health_. 2023;16:100518.
+9. Ludden C, Raven KE, Jamrozy D, Gouliouris T, Blane B, et al. One Health
+   genomic surveillance of _Escherichia coli_ demonstrates distinct
+   lineages and mobile genetic elements in isolates from humans versus
+   livestock. _mBio_. 2019;10:e02693-18.
+10. Sands K, Carvalho MJ, Portal E, Thomson K, Dyer C, et al.
+    Characterization of antimicrobial-resistant Gram-negative bacteria
+    that cause neonatal sepsis in seven low- and middle-income countries.
+    _Nature Microbiology_. 2021;6:512–523.
+11. Dicks J, Fazal M-A, Oliver K, Grayson NE, Turnbull JD, et al.
+    NCTC3000: a century of bacterial strain collecting leads to a rich
+    genomic data resource. _Microbial Genomics_. 2023;9:mgen000976.
+12. Blackwell GA, Hunt M, Malone KM, Lima L, Horesh G, et al. Exploring
+    bacterial diversity via a curated and searchable snapshot of archived
+    DNA sequences. _PLoS Biology_. 2021;19:e3001421.
+13. Schwengers O, Jelonek L, Dieckmann MA, Beyvers S, Blom J, Goesmann A.
+    Bakta: rapid and standardized annotation of bacterial genomes via
+    alignment-free sequence identification. _Microbial Genomics_.
+    2021;7:000685.
+14. Tonkin-Hill G, MacAlasdair N, Ruis C, Weimann A, Horesh G, et al.
+    Producing polished prokaryotic pangenomes with the Panaroo pipeline.
+    _Genome Biology_. 2020;21:180.

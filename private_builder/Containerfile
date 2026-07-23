@@ -1,0 +1,34 @@
+FROM docker.io/mambaorg/micromamba:2.8.1-debian13-slim
+
+USER root
+
+COPY private_builder/environments /tmp/environments
+
+RUN micromamba create --yes \
+        --file /tmp/environments/builder.yml && \
+    micromamba create --yes \
+        --file /tmp/environments/panaroo_1.5.2.yml && \
+    micromamba create --yes \
+        --file /tmp/environments/panaroo_1.6.0.yml && \
+    micromamba clean --all --yes
+
+COPY EC-K-typing_group2and3.toml /opt/ec-k-typing/
+COPY DB/panaroo_refset/gffs /opt/ec-k-typing/DB/panaroo_refset/gffs
+COPY DB/panaroo_refset/edit_novel_gff.sh \
+     DB/panaroo_refset/prepare_gffs_for_generate.py \
+     DB/panaroo_refset/finalise_generated_gffs.py \
+     DB/panaroo_refset/K-gff_to_gbk.py \
+     DB/panaroo_refset/locus_metadata.csv \
+     /opt/ec-k-typing/DB/panaroo_refset/
+COPY private_builder/*.py /opt/ec-k-typing/private_builder/
+
+RUN chmod -R a-w /opt/ec-k-typing && \
+    chmod a+rx \
+        /opt/ec-k-typing/private_builder/*.py \
+        /opt/ec-k-typing/DB/panaroo_refset/*.py \
+        /opt/ec-k-typing/DB/panaroo_refset/*.sh
+
+ENV EC_K_REFERENCE_ROOT=/opt/ec-k-typing
+ENV MAMBA_ROOT_PREFIX=/opt/conda
+
+ENTRYPOINT ["/opt/conda/envs/builder/bin/python", "/opt/ec-k-typing/private_builder/build_private_db.py"]

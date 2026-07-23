@@ -1,0 +1,10 @@
+name: builder
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - python=3.10
+  - biopython=1.84
+  - kaptive=3.1.0
+  - networkx=3.3
